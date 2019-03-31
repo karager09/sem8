@@ -170,17 +170,37 @@
           <id>car_call_list</id>
           <layout>var car_call_list: RANGE_LIST;</layout>
         </var>
-        <ml id="ID1412364216">fun add_floor(direction: STATUS, curr_floor: RANGE) =
+        <ml id="ID1412364216">fun add_floor(direction: STATUS, curr_floor: RANGE, car_call_list: RANGE_LIST, hall_call_list: HALL_CALL_LIST) =
 case direction of
-up =&gt; 1 
-| down =&gt; 0-1
+up =&gt; if ((hall_call_list = nil) andalso (car_call_list = nil)) then 0 else 
+      if (car_call_list &lt;&gt; nil) andalso ((hd (rev (sort RANGE.lt car_call_list))) &gt; curr_floor)
+         then 1
+         else if (hall_call_list &lt;&gt; nil) andalso (#1((hd (rev (sort HALL_CALL.lt hall_call_list)))) &gt; curr_floor)
+         then 1
+         else 0
+| down =&gt; if ((hall_call_list = nil) andalso (car_call_list = nil)) then 0 else 
+      if (car_call_list &lt;&gt; nil) andalso ((hd (sort RANGE.lt car_call_list)) &lt; curr_floor)
+         then 0-1
+         else if (hall_call_list &lt;&gt; nil) andalso ((#1(hd (sort HALL_CALL.lt hall_call_list))) &lt; curr_floor)
+         then 0-1
+         else 0
 | idle =&gt; if curr_floor &gt; Park_floor then 0-1 
    else if curr_floor &lt; Park_floor then 1 else 0
 |emergency =&gt; 0;
-          <layout>fun add_floor(direction: STATUS, curr_floor: RANGE) =
+          <layout>fun add_floor(direction: STATUS, curr_floor: RANGE, car_call_list: RANGE_LIST, hall_call_list: HALL_CALL_LIST) =
 case direction of
-up =&gt; 1 
-| down =&gt; 0-1
+up =&gt; if ((hall_call_list = nil) andalso (car_call_list = nil)) then 0 else 
+      if (car_call_list &lt;&gt; nil) andalso ((hd (rev (sort RANGE.lt car_call_list))) &gt; curr_floor)
+         then 1
+         else if (hall_call_list &lt;&gt; nil) andalso (#1((hd (rev (sort HALL_CALL.lt hall_call_list)))) &gt; curr_floor)
+         then 1
+         else 0
+| down =&gt; if ((hall_call_list = nil) andalso (car_call_list = nil)) then 0 else 
+      if (car_call_list &lt;&gt; nil) andalso ((hd (sort RANGE.lt car_call_list)) &lt; curr_floor)
+         then 0-1
+         else if (hall_call_list &lt;&gt; nil) andalso ((#1(hd (sort HALL_CALL.lt hall_call_list))) &lt; curr_floor)
+         then 0-1
+         else 0
 | idle =&gt; if curr_floor &gt; Park_floor then 0-1 
    else if curr_floor &lt; Park_floor then 1 else 0
 |emergency =&gt; 0;</layout>
@@ -217,10 +237,10 @@ up =&gt; if ((hall_call_list = nil) andalso (car_call_list = nil)) then
 |down =&gt; if ((hall_call_list = nil) andalso (car_call_list = nil)) then
    idle else 
       if (car_call_list &lt;&gt; nil) andalso ((hd (sort RANGE.lt car_call_list)) &lt; curr_floor)
-         then up
+         then down
          else if (hall_call_list &lt;&gt; nil) andalso ((#1(hd (sort HALL_CALL.lt hall_call_list))) &lt; curr_floor)
-         then up
-         else down
+         then down
+         else up
 |idle =&gt; if ((hall_call_list = nil) andalso (car_call_list = nil)) then
    idle else 
       if (car_call_list &lt;&gt; nil) andalso ((hd (rev (sort RANGE.lt car_call_list))) &gt; curr_floor)
@@ -242,10 +262,10 @@ up =&gt; if ((hall_call_list = nil) andalso (car_call_list = nil)) then
 |down =&gt; if ((hall_call_list = nil) andalso (car_call_list = nil)) then
    idle else 
       if (car_call_list &lt;&gt; nil) andalso ((hd (sort RANGE.lt car_call_list)) &lt; curr_floor)
-         then up
+         then down
          else if (hall_call_list &lt;&gt; nil) andalso ((#1(hd (sort HALL_CALL.lt hall_call_list))) &lt; curr_floor)
-         then up
-         else down
+         then down
+         else up
 |idle =&gt; if ((hall_call_list = nil) andalso (car_call_list = nil)) then
    idle else 
       if (car_call_list &lt;&gt; nil) andalso ((hd (rev (sort RANGE.lt car_call_list))) &gt; curr_floor)
@@ -254,6 +274,15 @@ up =&gt; if ((hall_call_list = nil) andalso (car_call_list = nil)) then
          then up
          else down
 |emergency =&gt; emergency;</layout>
+        </ml>
+        <ml id="ID1413459167">fun required_status(curr_floor: RANGE, dest_floor: RANGE) =
+if (curr_floor &gt; dest_floor) then down
+else if (curr_floor &lt; dest_floor) then up
+else down;
+          <layout>fun required_status(curr_floor: RANGE, dest_floor: RANGE) =
+if (curr_floor &gt; dest_floor) then down
+else if (curr_floor &lt; dest_floor) then up
+else down;</layout>
         </ml>
       </block>
     </globbox>
@@ -748,8 +777,8 @@ button</text>
         <binding x="7.200000"
                  y="-3.000000"/>
         <cond id="ID1412374153">
-          <posattr x="-415.500000"
-                   y="409.000000"/>
+          <posattr x="-430.500000"
+                   y="439.000000"/>
           <fillattr colour="White"
                     pattern="Solid"
                     filled="false"/>
@@ -1825,8 +1854,8 @@ Elev 2</text>
         <binding x="7.200000"
                  y="-3.000000"/>
         <cond id="ID1413064150">
-          <posattr x="348.500000"
-                   y="-196.000000"/>
+          <posattr x="374.500000"
+                   y="-220.000000"/>
           <fillattr colour="White"
                     pattern="Solid"
                     filled="false"/>
@@ -1837,6 +1866,9 @@ Elev 2</text>
                     bold="false"/>
           <text tool="CPN Tools"
                 version="4.0.1">not (contains hall_call_list [(curr_floor, stat)])
+andalso not((stat = idle) andalso 
+    ((contains hall_call_list [(curr_floor, up)]) orelse
+        (contains hall_call_list [(curr_floor, down)])))
 andalso not (contains car_call_list [curr_floor])</text>
         </cond>
         <time id="ID1412997422">
@@ -1902,8 +1934,8 @@ to car_call</text>
         <binding x="7.200000"
                  y="-3.000000"/>
         <cond id="ID1413151318">
-          <posattr x="245.000000"
-                   y="238.000000"/>
+          <posattr x="244.500000"
+                   y="252.000000"/>
           <fillattr colour="White"
                     pattern="Solid"
                     filled="false"/>
@@ -1913,8 +1945,10 @@ to car_call</text>
           <textattr colour="Black"
                     bold="false"/>
           <text tool="CPN Tools"
-                version="4.0.1">hall_call_list &lt;&gt; nil
-andalso (contains hall_call_list [(curr_floor, stat)])</text>
+                version="4.0.1">(contains hall_call_list [(curr_floor, stat)])
+orelse ((stat = idle) andalso 
+    ((contains hall_call_list [(curr_floor, up)]) orelse
+        (contains hall_call_list [(curr_floor, down)])))</text>
         </cond>
         <time id="ID1413002335">
           <posattr x="480.500000"
@@ -2226,8 +2260,8 @@ to dest</text>
           <text tool="CPN Tools"
                 version="4.0.1">change_to_car_call(
    curr_floor, 
-   if (stat = up) then (length (intersect hall_call_list [(curr_floor, up)])) else 0, 
-   if (stat = down) then (length (intersect hall_call_list [(curr_floor, down)])) else 0, 
+   if (stat = up orelse stat = idle) then (length (intersect hall_call_list [(curr_floor, up)])) else 0, 
+   if (stat = down orelse stat = idle) then (length (intersect hall_call_list [(curr_floor, down)])) else 0, 
    car_call_list)</text>
         </annot>
       </arc>
@@ -2388,7 +2422,8 @@ to dest</text>
           <textattr colour="Black"
                     bold="false"/>
           <text tool="CPN Tools"
-                version="4.0.1">rmall (curr_floor, stat) hall_call_list</text>
+                version="4.0.1">if (stat = idle) then (rmall (curr_floor, down) (rmall (curr_floor, up) hall_call_list))
+else (rmall (curr_floor, stat) hall_call_list)</text>
         </annot>
       </arc>
       <arc id="ID1413432836"
@@ -2446,7 +2481,7 @@ to dest</text>
           <textattr colour="Black"
                     bold="false"/>
           <text tool="CPN Tools"
-                version="4.0.1">(curr_floor + add_floor(stat, curr_floor),  change_status(curr_floor, stat, car_call_list, hall_call_list))</text>
+                version="4.0.1">(curr_floor + add_floor(stat, curr_floor, car_call_list, hall_call_list),  change_status(curr_floor, stat, car_call_list, hall_call_list))</text>
         </annot>
       </arc>
       <constraints/>
@@ -2465,7 +2500,7 @@ to dest</text>
     <page id="ID1413113278">
       <pageattr name="Assign hall_call"/>
       <place id="ID1413113286">
-        <posattr x="378.000000"
+        <posattr x="313.000000"
                  y="219.000000"/>
         <fillattr colour="White"
                   pattern=""
@@ -2488,7 +2523,7 @@ to dest</text>
                 anchor.vertical="0"/>
         </marking>
         <type id="ID1413113287">
-          <posattr x="454.500000"
+          <posattr x="389.500000"
                    y="195.000000"/>
           <fillattr colour="White"
                     pattern="Solid"
@@ -2502,7 +2537,7 @@ to dest</text>
                 version="4.0.1">HALL_CALL_LIST</text>
         </type>
         <initmark id="ID1413113288">
-          <posattr x="434.000000"
+          <posattr x="369.000000"
                    y="242.000000"/>
           <fillattr colour="White"
                     pattern="Solid"
@@ -2517,7 +2552,7 @@ to dest</text>
         </initmark>
         <port id="ID1413113361"
               type="I/O">
-          <posattr x="353.000000"
+          <posattr x="288.000000"
                    y="202.000000"/>
           <fillattr colour="White"
                     pattern="Solid"
@@ -2595,7 +2630,7 @@ to dest</text>
         </port>
       </place>
       <place id="ID1413113296">
-        <posattr x="-714.000000"
+        <posattr x="-688.000000"
                  y="219.000000"/>
         <fillattr colour="White"
                   pattern=""
@@ -2608,8 +2643,8 @@ to dest</text>
         <text>E2_hall_call</text>
         <ellipse w="60.000000"
                  h="40.000000"/>
-        <token x="-10.000000"
-               y="0.000000"/>
+        <token x="-44.000000"
+               y="24.000000"/>
         <marking x="0.000000"
                  y="0.000000"
                  hidden="false">
@@ -2618,7 +2653,7 @@ to dest</text>
                 anchor.vertical="0"/>
         </marking>
         <type id="ID1413113297">
-          <posattr x="-636.500000"
+          <posattr x="-610.500000"
                    y="195.000000"/>
           <fillattr colour="White"
                     pattern="Solid"
@@ -2632,7 +2667,7 @@ to dest</text>
                 version="4.0.1">HALL_CALL_LIST</text>
         </type>
         <initmark id="ID1413113298">
-          <posattr x="-657.000000"
+          <posattr x="-631.000000"
                    y="242.000000"/>
           <fillattr colour="White"
                     pattern="Solid"
@@ -2647,7 +2682,7 @@ to dest</text>
         </initmark>
         <port id="ID1413113369"
               type="I/O">
-          <posattr x="-738.000000"
+          <posattr x="-712.000000"
                    y="202.000000"/>
           <fillattr colour="White"
                     pattern="Solid"
@@ -2725,8 +2760,8 @@ to dest</text>
         </port>
       </place>
       <place id="ID1413113310">
-        <posattr x="-184.000000"
-                 y="294.000000"/>
+        <posattr x="-210.000000"
+                 y="436.000000"/>
         <fillattr colour="White"
                   pattern=""
                   filled="false"/>
@@ -2749,8 +2784,8 @@ clicked</text>
                 anchor.vertical="0"/>
         </marking>
         <type id="ID1413113311">
-          <posattr x="-124.000000"
-                   y="270.000000"/>
+          <posattr x="-150.000000"
+                   y="412.000000"/>
           <fillattr colour="White"
                     pattern="Solid"
                     filled="false"/>
@@ -2763,8 +2798,8 @@ clicked</text>
                 version="4.0.1">HALL_CALL</text>
         </type>
         <initmark id="ID1413113312">
-          <posattr x="-127.000000"
-                   y="317.000000"/>
+          <posattr x="-153.000000"
+                   y="459.000000"/>
           <fillattr colour="White"
                     pattern="Solid"
                     filled="false"/>
@@ -2778,8 +2813,8 @@ clicked</text>
         </initmark>
         <port id="ID1413113377"
               type="In">
-          <posattr x="-208.000000"
-                   y="277.000000"/>
+          <posattr x="-234.000000"
+                   y="419.000000"/>
           <fillattr colour="White"
                     pattern="Solid"
                     filled="false"/>
@@ -2810,8 +2845,8 @@ to E1</text>
         <binding x="7.200000"
                  y="-3.000000"/>
         <cond id="ID1413113281">
-          <posattr x="-17.000000"
-                   y="250.869205"/>
+          <posattr x="-74.000000"
+                   y="325.000000"/>
           <fillattr colour="White"
                     pattern="Solid"
                     filled="false"/>
@@ -2821,7 +2856,15 @@ to E1</text>
           <textattr colour="Black"
                     bold="false"/>
           <text tool="CPN Tools"
-                version="4.0.1"/>
+                version="4.0.1">(abs(curr_floor1 - hall_floor) &lt;= abs(curr_floor2 - hall_floor))
+andalso (stat1 = idle 
+    orelse curr_floor1 - hall_floor = 0
+    orelse (stat1 = required_status(curr_floor1, hall_floor)
+        andalso stat1 = direction) 
+    orelse not(stat2 = required_status(curr_floor2, hall_floor)))
+orelse (stat1 = required_status(curr_floor1, hall_floor) 
+    andalso stat1 = direction
+    andalso not(stat2 = direction))</text>
         </cond>
         <time id="ID1413113282">
           <posattr x="66.500000"
@@ -2885,9 +2928,9 @@ to E2</text>
              h="40.000000"/>
         <binding x="7.200000"
                  y="-3.000000"/>
-        <cond id="ID1413114753">
-          <posattr x="-435.000000"
-                   y="250.000000"/>
+        <cond id="ID1413466489">
+          <posattr x="-490.000000"
+                   y="324.000000"/>
           <fillattr colour="White"
                     pattern="Solid"
                     filled="false"/>
@@ -2897,7 +2940,15 @@ to E2</text>
           <textattr colour="Black"
                     bold="false"/>
           <text tool="CPN Tools"
-                version="4.0.1"/>
+                version="4.0.1">not((abs(curr_floor1 - hall_floor) &lt;= abs(curr_floor2 - hall_floor))
+andalso (stat1 = idle 
+    orelse curr_floor1 - hall_floor = 0
+    orelse (stat1 = required_status(curr_floor1, hall_floor)
+        andalso stat1 = direction) 
+    orelse not(stat2 = required_status(curr_floor2, hall_floor)))
+orelse (stat1 = required_status(curr_floor1, hall_floor) 
+    andalso stat1 = direction
+    andalso not(stat2 = direction)))</text>
         </cond>
         <time id="ID1413114754">
           <posattr x="-351.500000"
@@ -2960,7 +3011,7 @@ to E2</text>
         <transend idref="ID1413113280"/>
         <placeend idref="ID1413113286"/>
         <annot id="ID1413113290">
-          <posattr x="215.000000"
+          <posattr x="179.000000"
                    y="223.000000"/>
           <fillattr colour="White"
                     pattern="Solid"
@@ -3024,7 +3075,7 @@ to E2</text>
         <transend idref="ID1413113280"/>
         <placeend idref="ID1413113286"/>
         <annot id="ID1413113302">
-          <posattr x="201.000000"
+          <posattr x="168.000000"
                    y="237.000000"/>
           <fillattr colour="White"
                     pattern="Solid"
@@ -3088,8 +3139,8 @@ to E2</text>
         <transend idref="ID1413113280"/>
         <placeend idref="ID1413113310"/>
         <annot id="ID1413113314">
-          <posattr x="-28.000000"
-                   y="272.000000"/>
+          <posattr x="-89.000000"
+                   y="391.000000"/>
           <fillattr colour="White"
                     pattern="Solid"
                     filled="false"/>
@@ -3120,7 +3171,7 @@ to E2</text>
         <transend idref="ID1413114752"/>
         <placeend idref="ID1413113296"/>
         <annot id="ID1413122267">
-          <posattr x="-556.000000"
+          <posattr x="-543.000000"
                    y="223.000000"/>
           <fillattr colour="White"
                     pattern="Solid"
@@ -3152,8 +3203,8 @@ to E2</text>
         <transend idref="ID1413114752"/>
         <placeend idref="ID1413113310"/>
         <annot id="ID1413123171">
-          <posattr x="-349.000000"
-                   y="270.000000"/>
+          <posattr x="-318.000000"
+                   y="398.000000"/>
           <fillattr colour="White"
                     pattern="Solid"
                     filled="false"/>
@@ -3248,7 +3299,7 @@ to E2</text>
         <transend idref="ID1413114752"/>
         <placeend idref="ID1413113296"/>
         <annot id="ID1413133535">
-          <posattr x="-556.000000"
+          <posattr x="-543.000000"
                    y="237.000000"/>
           <fillattr colour="White"
                     pattern="Solid"
@@ -3307,12 +3358,12 @@ to E2</text>
           <text>&lt;same as model&gt;</text>
         </value>
       </option>
-      <option name="extensions.10003.enable">
+      <option name="extensions.10001.enable">
         <value>
           <boolean>true</boolean>
         </value>
       </option>
-      <option name="extensions.10001.enable">
+      <option name="extensions.10003.enable">
         <value>
           <boolean>true</boolean>
         </value>
@@ -3322,12 +3373,12 @@ to E2</text>
           <boolean>true</boolean>
         </value>
       </option>
-      <option name="extensions.10006.enable">
+      <option name="extensions.10005.enable">
         <value>
           <boolean>true</boolean>
         </value>
       </option>
-      <option name="extensions.10005.enable">
+      <option name="extensions.10006.enable">
         <value>
           <boolean>true</boolean>
         </value>
@@ -3530,14 +3581,14 @@ to E2</text>
     </options>
     <binders>
       <cpnbinder id="ID2222"
-                 x="691"
-                 y="139"
+                 x="518"
+                 y="141"
                  width="1165"
                  height="609">
         <sheets>
           <cpnsheet id="ID2215"
-                    panx="117.000000"
-                    pany="342.000000"
+                    panx="127.000000"
+                    pany="325.000000"
                     zoom="1.150476"
                     instance="ID2149">
             <zorder>
@@ -3545,8 +3596,8 @@ to E2</text>
             </zorder>
           </cpnsheet>
           <cpnsheet id="ID1413113650"
-                    panx="82.000000"
-                    pany="100.000000"
+                    panx="103.000000"
+                    pany="182.000000"
                     zoom="1.000000"
                     instance="ID1413113336">
             <zorder>
@@ -3554,8 +3605,8 @@ to E2</text>
             </zorder>
           </cpnsheet>
           <cpnsheet id="ID1413347413"
-                    panx="-288.000000"
-                    pany="-45.000000"
+                    panx="-322.000000"
+                    pany="-17.000000"
                     zoom="1.000000"
                     instance="ID1412997456">
             <zorder>
@@ -3573,10 +3624,10 @@ to E2</text>
           </cpnsheet>
         </sheets>
         <zorder>
-          <position value="1"/>
           <position value="3"/>
-          <position value="0"/>
           <position value="2"/>
+          <position value="1"/>
+          <position value="0"/>
         </zorder>
       </cpnbinder>
     </binders>
@@ -3678,8 +3729,9 @@ to E2</text>
           <IndexNode expanded="true"/>
           <IndexNode expanded="true"/>
           <IndexNode expanded="true"/>
-          <IndexNode expanded="true"/>
           <IndexNode expanded="false"/>
+          <IndexNode expanded="false"/>
+          <IndexNode expanded="true"/>
           <IndexNode expanded="true"/>
         </IndexNode>
       </IndexNode>
