@@ -1,0 +1,708 @@
+CPN Tools state space report for:
+/cygdrive/D/Studia/Sem. 8/sem8_git/MF/Winda_Karas.cpn
+Report generated: Sun Mar 31 21:54:03 2019
+
+
+ Statistics
+------------------------------------------------------------------------
+
+  State Space
+     Nodes:  42615
+     Arcs:   57078
+     Secs:   300
+     Status: Partial
+
+  Scc Graph
+     Nodes:  41348
+     Arcs:   54825
+     Secs:   2
+
+
+ Boundedness Properties
+------------------------------------------------------------------------
+
+  Best Integer Bounds
+                             Upper      Lower
+     Main'Button_clicked 1   1          0
+     Main'Direction 1        2          2
+     Main'E1_car_call 1      1          1
+     Main'E1_hall_call 1     1          1
+     Main'E1_status 1        1          1
+     Main'E2_car_call 1      1          1
+     Main'E2_hall_call 1     1          1
+     Main'E2_status 1        1          1
+     Main'Hall_floor 1       4          4
+
+  Best Upper Multi-set Bounds
+     Main'Button_clicked 1
+                         1`(1,up)++
+1`(2,up)++
+1`(2,down)++
+1`(3,up)++
+1`(3,down)++
+1`(4,down)
+     Main'Direction 1    1`up++
+1`down
+     Main'E1_car_call 1  1`[]++
+1`[1]++
+1`[2]++
+1`[2,3]++
+1`[2,4]++
+1`[2,4,3]++
+1`[3]++
+1`[3,2]++
+1`[3,2,4]++
+1`[3,4]++
+1`[3,4,2]++
+1`[4]++
+1`[4,2]++
+1`[4,2,3]++
+1`[4,3]++
+1`[4,3,2]
+     Main'E1_hall_call 1 1`[]++
+1`[(1,up)]++
+1`[(1,up),(2,up)]++
+1`[(1,up),(2,up),(3,up)]++
+1`[(1,up),(2,up),(3,up),(3,down)]++
+1`[(1,up),(2,up),(3,up),(3,down),(4,down)]++
+1`[(1,up),(2,up),(3,up),(4,down)]++
+1`[(1,up),(2,up),(3,up),(4,down),(3,down)]++
+1`[(1,up),(2,up),(3,down)]++
+1`[(1,up),(2,up),(3,down),(3,up)]++
+1`[(1,up),(2,up),(3,down),(3,up),(4,down)]++
+1`[(1,up),(2,up),(3,down),(4,down)]++
+1`[(1,up),(2,up),(3,down),(4,down),(3,up)]++
+1`[(1,up),(2,up),(4,down)]++
+1`[(1,up),(2,up),(4,down),(3,up)]++
+1`[(1,up),(2,up),(4,down),(3,up),(3,down)]++
+1`[(1,up),(2,up),(4,down),(3,down)]++
+1`[(1,up),(2,up),(4,down),(3,down),(3,up)]++
+1`[(1,up),(2,down)]++
+1`[(1,up),(3,up)]++
+1`[(1,up),(3,up),(2,up)]++
+1`[(1,up),(3,up),(2,up),(3,down)]++
+1`[(1,up),(3,up),(2,up),(3,down),(4,down)]++
+1`[(1,up),(3,up),(2,up),(4,down)]++
+1`[(1,up),(3,up),(2,up),(4,down),(3,down)]++
+1`[(1,up),(3,up),(3,down)]++
+1`[(1,up),(3,up),(3,down),(2,up)]++
+1`[(1,up),(3,up),(3,down),(2,up),(4,down)]++
+1`[(1,up),(3,up),(3,down),(4,down)]++
+1`[(1,up),(3,up),(3,down),(4,down),(2,up)]++
+1`[(1,up),(3,up),(4,down)]++
+1`[(1,up),(3,up),(4,down),(2,up)]++
+1`[(1,up),(3,up),(4,down),(2,up),(3,down)]++
+1`[(1,up),(3,up),(4,down),(3,down)]++
+1`[(1,up),(3,up),(4,down),(3,down),(2,up)]++
+1`[(1,up),(3,down)]++
+1`[(1,up),(3,down),(2,up)]++
+1`[(1,up),(3,down),(2,up),(3,up)]++
+1`[(1,up),(3,down),(2,up),(3,up),(4,down)]++
+1`[(1,up),(3,down),(2,up),(4,down)]++
+1`[(1,up),(3,down),(2,up),(4,down),(3,up)]++
+1`[(1,up),(3,down),(3,up)]++
+1`[(1,up),(3,down),(3,up),(2,up)]++
+1`[(1,up),(3,down),(3,up),(2,up),(4,down)]++
+1`[(1,up),(3,down),(3,up),(4,down)]++
+1`[(1,up),(3,down),(3,up),(4,down),(2,up)]++
+1`[(1,up),(3,down),(4,down)]++
+1`[(1,up),(3,down),(4,down),(2,up)]++
+1`[(1,up),(3,down),(4,down),(2,up),(3,up)]++
+1`[(1,up),(3,down),(4,down),(3,up)]++
+1`[(1,up),(3,down),(4,down),(3,up),(2,up)]++
+1`[(1,up),(4,down)]++
+1`[(1,up),(4,down),(2,up)]++
+1`[(1,up),(4,down),(2,up),(3,up)]++
+1`[(1,up),(4,down),(2,up),(3,up),(3,down)]++
+1`[(1,up),(4,down),(2,up),(3,down)]++
+1`[(1,up),(4,down),(2,up),(3,down),(3,up)]++
+1`[(1,up),(4,down),(3,up)]++
+1`[(1,up),(4,down),(3,up),(2,up)]++
+1`[(1,up),(4,down),(3,up),(2,up),(3,down)]++
+1`[(1,up),(4,down),(3,up),(3,down)]++
+1`[(1,up),(4,down),(3,up),(3,down),(2,up)]++
+1`[(1,up),(4,down),(3,down)]++
+1`[(1,up),(4,down),(3,down),(2,up)]++
+1`[(1,up),(4,down),(3,down),(2,up),(3,up)]++
+1`[(1,up),(4,down),(3,down),(3,up)]++
+1`[(1,up),(4,down),(3,down),(3,up),(2,up)]++
+1`[(2,up)]++
+1`[(2,up),(1,up)]++
+1`[(2,up),(1,up),(3,up)]++
+1`[(2,up),(1,up),(3,up),(3,down)]++
+1`[(2,up),(1,up),(3,up),(3,down),(4,down)]++
+1`[(2,up),(1,up),(3,up),(4,down)]++
+1`[(2,up),(1,up),(3,up),(4,down),(3,down)]++
+1`[(2,up),(1,up),(3,down)]++
+1`[(2,up),(1,up),(3,down),(3,up)]++
+1`[(2,up),(1,up),(3,down),(3,up),(4,down)]++
+1`[(2,up),(1,up),(3,down),(4,down)]++
+1`[(2,up),(1,up),(3,down),(4,down),(3,up)]++
+1`[(2,up),(1,up),(4,down)]++
+1`[(2,up),(1,up),(4,down),(3,up)]++
+1`[(2,up),(1,up),(4,down),(3,up),(3,down)]++
+1`[(2,up),(1,up),(4,down),(3,down)]++
+1`[(2,up),(1,up),(4,down),(3,down),(3,up)]++
+1`[(2,up),(2,down)]++
+1`[(2,up),(2,down),(1,up)]++
+1`[(2,up),(2,down),(3,up),(1,up)]++
+1`[(2,up),(2,down),(3,down),(1,up)]++
+1`[(2,up),(2,down),(4,down),(1,up)]++
+1`[(2,up),(3,up)]++
+1`[(2,up),(3,up),(1,up)]++
+1`[(2,up),(3,up),(1,up),(3,down)]++
+1`[(2,up),(3,up),(1,up),(3,down),(4,down)]++
+1`[(2,up),(3,up),(1,up),(4,down)]++
+1`[(2,up),(3,up),(1,up),(4,down),(3,down)]++
+1`[(2,up),(3,up),(2,down),(1,up)]++
+1`[(2,up),(3,up),(3,down)]++
+1`[(2,up),(3,up),(3,down),(1,up)]++
+1`[(2,up),(3,up),(3,down),(1,up),(4,down)]++
+1`[(2,up),(3,up),(3,down),(4,down)]++
+1`[(2,up),(3,up),(3,down),(4,down),(1,up)]++
+1`[(2,up),(3,up),(4,down)]++
+1`[(2,up),(3,up),(4,down),(1,up)]++
+1`[(2,up),(3,up),(4,down),(1,up),(3,down)]++
+1`[(2,up),(3,up),(4,down),(3,down)]++
+1`[(2,up),(3,up),(4,down),(3,down),(1,up)]++
+1`[(2,up),(3,down)]++
+1`[(2,up),(3,down),(1,up)]++
+1`[(2,up),(3,down),(1,up),(3,up)]++
+1`[(2,up),(3,down),(1,up),(3,up),(4,down)]++
+1`[(2,up),(3,down),(1,up),(4,down)]++
+1`[(2,up),(3,down),(1,up),(4,down),(3,up)]++
+1`[(2,up),(3,down),(2,down),(1,up)]++
+1`[(2,up),(3,down),(3,up)]++
+1`[(2,up),(3,down),(3,up),(1,up)]++
+1`[(2,up),(3,down),(3,up),(1,up),(4,down)]++
+1`[(2,up),(3,down),(3,up),(4,down)]++
+1`[(2,up),(3,down),(3,up),(4,down),(1,up)]++
+1`[(2,up),(3,down),(4,down)]++
+1`[(2,up),(3,down),(4,down),(1,up)]++
+1`[(2,up),(3,down),(4,down),(1,up),(3,up)]++
+1`[(2,up),(3,down),(4,down),(3,up)]++
+1`[(2,up),(3,down),(4,down),(3,up),(1,up)]++
+1`[(2,up),(4,down)]++
+1`[(2,up),(4,down),(1,up)]++
+1`[(2,up),(4,down),(1,up),(3,up)]++
+1`[(2,up),(4,down),(1,up),(3,up),(3,down)]++
+1`[(2,up),(4,down),(1,up),(3,down)]++
+1`[(2,up),(4,down),(1,up),(3,down),(3,up)]++
+1`[(2,up),(4,down),(2,down),(1,up)]++
+1`[(2,up),(4,down),(3,up)]++
+1`[(2,up),(4,down),(3,up),(1,up)]++
+1`[(2,up),(4,down),(3,up),(1,up),(3,down)]++
+1`[(2,up),(4,down),(3,up),(3,down)]++
+1`[(2,up),(4,down),(3,up),(3,down),(1,up)]++
+1`[(2,up),(4,down),(3,down)]++
+1`[(2,up),(4,down),(3,down),(1,up)]++
+1`[(2,up),(4,down),(3,down),(1,up),(3,up)]++
+1`[(2,up),(4,down),(3,down),(3,up)]++
+1`[(2,up),(4,down),(3,down),(3,up),(1,up)]++
+1`[(2,down)]++
+1`[(2,down),(1,up)]++
+1`[(2,down),(2,up)]++
+1`[(2,down),(2,up),(1,up)]++
+1`[(2,down),(2,up),(3,up),(1,up)]++
+1`[(2,down),(2,up),(3,down),(1,up)]++
+1`[(2,down),(2,up),(4,down),(1,up)]++
+1`[(2,down),(3,up)]++
+1`[(2,down),(3,up),(1,up)]++
+1`[(2,down),(3,up),(2,up),(1,up)]++
+1`[(2,down),(3,up),(3,down),(1,up)]++
+1`[(2,down),(3,up),(4,down),(1,up)]++
+1`[(2,down),(3,down)]++
+1`[(2,down),(3,down),(1,up)]++
+1`[(2,down),(3,down),(2,up),(1,up)]++
+1`[(2,down),(3,down),(3,up),(1,up)]++
+1`[(2,down),(3,down),(4,down),(1,up)]++
+1`[(2,down),(4,down)]++
+1`[(2,down),(4,down),(1,up)]++
+1`[(2,down),(4,down),(2,up),(1,up)]++
+1`[(2,down),(4,down),(3,up),(1,up)]++
+1`[(2,down),(4,down),(3,down),(1,up)]++
+1`[(3,up)]++
+1`[(3,up),(1,up)]++
+1`[(3,up),(1,up),(2,up)]++
+1`[(3,up),(1,up),(2,up),(3,down)]++
+1`[(3,up),(1,up),(2,up),(3,down),(4,down)]++
+1`[(3,up),(1,up),(2,up),(4,down)]++
+1`[(3,up),(1,up),(2,up),(4,down),(3,down)]++
+1`[(3,up),(1,up),(3,down)]++
+1`[(3,up),(1,up),(3,down),(2,up)]++
+1`[(3,up),(1,up),(3,down),(2,up),(4,down)]++
+1`[(3,up),(1,up),(3,down),(4,down)]++
+1`[(3,up),(1,up),(3,down),(4,down),(2,up)]++
+1`[(3,up),(1,up),(4,down)]++
+1`[(3,up),(1,up),(4,down),(2,up)]++
+1`[(3,up),(1,up),(4,down),(2,up),(3,down)]++
+1`[(3,up),(1,up),(4,down),(3,down)]++
+1`[(3,up),(1,up),(4,down),(3,down),(2,up)]++
+1`[(3,up),(2,up)]++
+1`[(3,up),(2,up),(1,up)]++
+1`[(3,up),(2,up),(1,up),(3,down)]++
+1`[(3,up),(2,up),(1,up),(3,down),(4,down)]++
+1`[(3,up),(2,up),(1,up),(4,down)]++
+1`[(3,up),(2,up),(1,up),(4,down),(3,down)]++
+1`[(3,up),(2,up),(2,down),(1,up)]++
+1`[(3,up),(2,up),(3,down)]++
+1`[(3,up),(2,up),(3,down),(1,up)]++
+1`[(3,up),(2,up),(3,down),(1,up),(4,down)]++
+1`[(3,up),(2,up),(3,down),(4,down)]++
+1`[(3,up),(2,up),(3,down),(4,down),(1,up)]++
+1`[(3,up),(2,up),(4,down)]++
+1`[(3,up),(2,up),(4,down),(1,up)]++
+1`[(3,up),(2,up),(4,down),(1,up),(3,down)]++
+1`[(3,up),(2,up),(4,down),(3,down)]++
+1`[(3,up),(2,up),(4,down),(3,down),(1,up)]++
+1`[(3,up),(2,down)]++
+1`[(3,up),(2,down),(1,up)]++
+1`[(3,up),(2,down),(2,up),(1,up)]++
+1`[(3,up),(2,down),(3,down),(1,up)]++
+1`[(3,up),(2,down),(4,down),(1,up)]++
+1`[(3,up),(3,down)]++
+1`[(3,up),(3,down),(1,up)]++
+1`[(3,up),(3,down),(1,up),(2,up)]++
+1`[(3,up),(3,down),(1,up),(2,up),(4,down)]++
+1`[(3,up),(3,down),(1,up),(4,down)]++
+1`[(3,up),(3,down),(1,up),(4,down),(2,up)]++
+1`[(3,up),(3,down),(2,up)]++
+1`[(3,up),(3,down),(2,up),(1,up)]++
+1`[(3,up),(3,down),(2,up),(1,up),(4,down)]++
+1`[(3,up),(3,down),(2,up),(4,down)]++
+1`[(3,up),(3,down),(2,up),(4,down),(1,up)]++
+1`[(3,up),(3,down),(2,down),(1,up)]++
+1`[(3,up),(3,down),(4,down)]++
+1`[(3,up),(3,down),(4,down),(1,up)]++
+1`[(3,up),(3,down),(4,down),(1,up),(2,up)]++
+1`[(3,up),(3,down),(4,down),(2,up)]++
+1`[(3,up),(3,down),(4,down),(2,up),(1,up)]++
+1`[(3,up),(4,down)]++
+1`[(3,up),(4,down),(1,up)]++
+1`[(3,up),(4,down),(1,up),(2,up)]++
+1`[(3,up),(4,down),(1,up),(2,up),(3,down)]++
+1`[(3,up),(4,down),(1,up),(3,down)]++
+1`[(3,up),(4,down),(1,up),(3,down),(2,up)]++
+1`[(3,up),(4,down),(2,up)]++
+1`[(3,up),(4,down),(2,up),(1,up)]++
+1`[(3,up),(4,down),(2,up),(1,up),(3,down)]++
+1`[(3,up),(4,down),(2,up),(3,down)]++
+1`[(3,up),(4,down),(2,up),(3,down),(1,up)]++
+1`[(3,up),(4,down),(2,down),(1,up)]++
+1`[(3,up),(4,down),(3,down)]++
+1`[(3,up),(4,down),(3,down),(1,up)]++
+1`[(3,up),(4,down),(3,down),(1,up),(2,up)]++
+1`[(3,up),(4,down),(3,down),(2,up)]++
+1`[(3,up),(4,down),(3,down),(2,up),(1,up)]++
+1`[(3,down)]++
+1`[(3,down),(1,up)]++
+1`[(3,down),(1,up),(2,up)]++
+1`[(3,down),(1,up),(2,up),(3,up)]++
+1`[(3,down),(1,up),(2,up),(3,up),(4,down)]++
+1`[(3,down),(1,up),(2,up),(4,down)]++
+1`[(3,down),(1,up),(2,up),(4,down),(3,up)]++
+1`[(3,down),(1,up),(3,up)]++
+1`[(3,down),(1,up),(3,up),(2,up)]++
+1`[(3,down),(1,up),(3,up),(2,up),(4,down)]++
+1`[(3,down),(1,up),(3,up),(4,down)]++
+1`[(3,down),(1,up),(3,up),(4,down),(2,up)]++
+1`[(3,down),(1,up),(4,down)]++
+1`[(3,down),(1,up),(4,down),(2,up)]++
+1`[(3,down),(1,up),(4,down),(2,up),(3,up)]++
+1`[(3,down),(1,up),(4,down),(3,up)]++
+1`[(3,down),(1,up),(4,down),(3,up),(2,up)]++
+1`[(3,down),(2,up)]++
+1`[(3,down),(2,up),(1,up)]++
+1`[(3,down),(2,up),(1,up),(3,up)]++
+1`[(3,down),(2,up),(1,up),(3,up),(4,down)]++
+1`[(3,down),(2,up),(1,up),(4,down)]++
+1`[(3,down),(2,up),(1,up),(4,down),(3,up)]++
+1`[(3,down),(2,up),(2,down),(1,up)]++
+1`[(3,down),(2,up),(3,up)]++
+1`[(3,down),(2,up),(3,up),(1,up)]++
+1`[(3,down),(2,up),(3,up),(1,up),(4,down)]++
+1`[(3,down),(2,up),(3,up),(4,down)]++
+1`[(3,down),(2,up),(3,up),(4,down),(1,up)]++
+1`[(3,down),(2,up),(4,down)]++
+1`[(3,down),(2,up),(4,down),(1,up)]++
+1`[(3,down),(2,up),(4,down),(1,up),(3,up)]++
+1`[(3,down),(2,up),(4,down),(3,up)]++
+1`[(3,down),(2,up),(4,down),(3,up),(1,up)]++
+1`[(3,down),(2,down)]++
+1`[(3,down),(2,down),(1,up)]++
+1`[(3,down),(2,down),(2,up),(1,up)]++
+1`[(3,down),(2,down),(3,up),(1,up)]++
+1`[(3,down),(2,down),(4,down),(1,up)]++
+1`[(3,down),(3,up)]++
+1`[(3,down),(3,up),(1,up)]++
+1`[(3,down),(3,up),(1,up),(2,up)]++
+1`[(3,down),(3,up),(1,up),(2,up),(4,down)]++
+1`[(3,down),(3,up),(1,up),(4,down)]++
+1`[(3,down),(3,up),(1,up),(4,down),(2,up)]++
+1`[(3,down),(3,up),(2,up)]++
+1`[(3,down),(3,up),(2,up),(1,up)]++
+1`[(3,down),(3,up),(2,up),(1,up),(4,down)]++
+1`[(3,down),(3,up),(2,up),(4,down)]++
+1`[(3,down),(3,up),(2,up),(4,down),(1,up)]++
+1`[(3,down),(3,up),(2,down),(1,up)]++
+1`[(3,down),(3,up),(4,down)]++
+1`[(3,down),(3,up),(4,down),(1,up)]++
+1`[(3,down),(3,up),(4,down),(1,up),(2,up)]++
+1`[(3,down),(3,up),(4,down),(2,up)]++
+1`[(3,down),(3,up),(4,down),(2,up),(1,up)]++
+1`[(3,down),(4,down)]++
+1`[(3,down),(4,down),(1,up)]++
+1`[(3,down),(4,down),(1,up),(2,up)]++
+1`[(3,down),(4,down),(1,up),(2,up),(3,up)]++
+1`[(3,down),(4,down),(1,up),(3,up)]++
+1`[(3,down),(4,down),(1,up),(3,up),(2,up)]++
+1`[(3,down),(4,down),(2,up)]++
+1`[(3,down),(4,down),(2,up),(1,up)]++
+1`[(3,down),(4,down),(2,up),(1,up),(3,up)]++
+1`[(3,down),(4,down),(2,up),(3,up)]++
+1`[(3,down),(4,down),(2,up),(3,up),(1,up)]++
+1`[(3,down),(4,down),(2,down),(1,up)]++
+1`[(3,down),(4,down),(3,up)]++
+1`[(3,down),(4,down),(3,up),(1,up)]++
+1`[(3,down),(4,down),(3,up),(1,up),(2,up)]++
+1`[(3,down),(4,down),(3,up),(2,up)]++
+1`[(3,down),(4,down),(3,up),(2,up),(1,up)]++
+1`[(4,down)]++
+1`[(4,down),(1,up)]++
+1`[(4,down),(1,up),(2,up)]++
+1`[(4,down),(1,up),(2,up),(3,up)]++
+1`[(4,down),(1,up),(2,up),(3,up),(3,down)]++
+1`[(4,down),(1,up),(2,up),(3,down)]++
+1`[(4,down),(1,up),(2,up),(3,down),(3,up)]++
+1`[(4,down),(1,up),(3,up)]++
+1`[(4,down),(1,up),(3,up),(2,up)]++
+1`[(4,down),(1,up),(3,up),(2,up),(3,down)]++
+1`[(4,down),(1,up),(3,up),(3,down)]++
+1`[(4,down),(1,up),(3,up),(3,down),(2,up)]++
+1`[(4,down),(1,up),(3,down)]++
+1`[(4,down),(1,up),(3,down),(2,up)]++
+1`[(4,down),(1,up),(3,down),(2,up),(3,up)]++
+1`[(4,down),(1,up),(3,down),(3,up)]++
+1`[(4,down),(1,up),(3,down),(3,up),(2,up)]++
+1`[(4,down),(2,up)]++
+1`[(4,down),(2,up),(1,up)]++
+1`[(4,down),(2,up),(1,up),(3,up)]++
+1`[(4,down),(2,up),(1,up),(3,up),(3,down)]++
+1`[(4,down),(2,up),(1,up),(3,down)]++
+1`[(4,down),(2,up),(1,up),(3,down),(3,up)]++
+1`[(4,down),(2,up),(2,down),(1,up)]++
+1`[(4,down),(2,up),(3,up)]++
+1`[(4,down),(2,up),(3,up),(1,up)]++
+1`[(4,down),(2,up),(3,up),(1,up),(3,down)]++
+1`[(4,down),(2,up),(3,up),(3,down)]++
+1`[(4,down),(2,up),(3,up),(3,down),(1,up)]++
+1`[(4,down),(2,up),(3,down)]++
+1`[(4,down),(2,up),(3,down),(1,up)]++
+1`[(4,down),(2,up),(3,down),(1,up),(3,up)]++
+1`[(4,down),(2,up),(3,down),(3,up)]++
+1`[(4,down),(2,up),(3,down),(3,up),(1,up)]++
+1`[(4,down),(2,down)]++
+1`[(4,down),(2,down),(1,up)]++
+1`[(4,down),(2,down),(2,up),(1,up)]++
+1`[(4,down),(2,down),(3,up),(1,up)]++
+1`[(4,down),(2,down),(3,down),(1,up)]++
+1`[(4,down),(3,up)]++
+1`[(4,down),(3,up),(1,up)]++
+1`[(4,down),(3,up),(1,up),(2,up)]++
+1`[(4,down),(3,up),(1,up),(2,up),(3,down)]++
+1`[(4,down),(3,up),(1,up),(3,down)]++
+1`[(4,down),(3,up),(1,up),(3,down),(2,up)]++
+1`[(4,down),(3,up),(2,up)]++
+1`[(4,down),(3,up),(2,up),(1,up)]++
+1`[(4,down),(3,up),(2,up),(1,up),(3,down)]++
+1`[(4,down),(3,up),(2,up),(3,down)]++
+1`[(4,down),(3,up),(2,up),(3,down),(1,up)]++
+1`[(4,down),(3,up),(2,down),(1,up)]++
+1`[(4,down),(3,up),(3,down)]++
+1`[(4,down),(3,up),(3,down),(1,up)]++
+1`[(4,down),(3,up),(3,down),(1,up),(2,up)]++
+1`[(4,down),(3,up),(3,down),(2,up)]++
+1`[(4,down),(3,up),(3,down),(2,up),(1,up)]++
+1`[(4,down),(3,down)]++
+1`[(4,down),(3,down),(1,up)]++
+1`[(4,down),(3,down),(1,up),(2,up)]++
+1`[(4,down),(3,down),(1,up),(2,up),(3,up)]++
+1`[(4,down),(3,down),(1,up),(3,up)]++
+1`[(4,down),(3,down),(1,up),(3,up),(2,up)]++
+1`[(4,down),(3,down),(2,up)]++
+1`[(4,down),(3,down),(2,up),(1,up)]++
+1`[(4,down),(3,down),(2,up),(1,up),(3,up)]++
+1`[(4,down),(3,down),(2,up),(3,up)]++
+1`[(4,down),(3,down),(2,up),(3,up),(1,up)]++
+1`[(4,down),(3,down),(2,down),(1,up)]++
+1`[(4,down),(3,down),(3,up)]++
+1`[(4,down),(3,down),(3,up),(1,up)]++
+1`[(4,down),(3,down),(3,up),(1,up),(2,up)]++
+1`[(4,down),(3,down),(3,up),(2,up)]++
+1`[(4,down),(3,down),(3,up),(2,up),(1,up)]
+     Main'E1_status 1    1`(1,up)++
+1`(1,down)++
+1`(1,idle)++
+1`(1,emergency)++
+1`(2,up)++
+1`(2,down)++
+1`(2,idle)++
+1`(2,emergency)++
+1`(3,up)++
+1`(3,down)++
+1`(3,idle)++
+1`(3,emergency)++
+1`(4,up)++
+1`(4,down)++
+1`(4,idle)++
+1`(4,emergency)
+     Main'E2_car_call 1  1`[]++
+1`[1]++
+1`[1,2]++
+1`[1,3]++
+1`[1,4]++
+1`[2]++
+1`[2,1]++
+1`[2,3]++
+1`[2,4]++
+1`[3]++
+1`[3,2]++
+1`[3,4]++
+1`[4]++
+1`[4,1]++
+1`[4,2]++
+1`[4,3]
+     Main'E2_hall_call 1 1`[]++
+1`[(1,up)]++
+1`[(1,up),(2,up)]++
+1`[(1,up),(2,up),(2,down)]++
+1`[(1,up),(2,down)]++
+1`[(1,up),(3,up)]++
+1`[(1,up),(3,up),(2,down)]++
+1`[(1,up),(3,down)]++
+1`[(1,up),(3,down),(2,down)]++
+1`[(1,up),(3,down),(4,down),(2,down)]++
+1`[(1,up),(4,down)]++
+1`[(1,up),(4,down),(2,down)]++
+1`[(1,up),(4,down),(3,down),(2,down)]++
+1`[(2,up)]++
+1`[(2,up),(1,up),(2,down)]++
+1`[(2,up),(2,down)]++
+1`[(2,up),(2,down),(3,up)]++
+1`[(2,up),(2,down),(3,down)]++
+1`[(2,up),(2,down),(4,down)]++
+1`[(2,up),(3,up)]++
+1`[(2,up),(3,up),(2,down)]++
+1`[(2,up),(3,up),(3,down)]++
+1`[(2,up),(3,up),(3,down),(2,down)]++
+1`[(2,up),(3,up),(3,down),(4,down),(2,down)]++
+1`[(2,up),(3,up),(4,down)]++
+1`[(2,up),(3,up),(4,down),(2,down)]++
+1`[(2,up),(3,up),(4,down),(3,down),(2,down)]++
+1`[(2,up),(3,down)]++
+1`[(2,up),(3,down),(2,down)]++
+1`[(2,up),(3,down),(3,up)]++
+1`[(2,up),(3,down),(3,up),(2,down)]++
+1`[(2,up),(3,down),(3,up),(4,down),(2,down)]++
+1`[(2,up),(3,down),(4,down)]++
+1`[(2,up),(3,down),(4,down),(2,down)]++
+1`[(2,up),(3,down),(4,down),(3,up),(2,down)]++
+1`[(2,up),(4,down)]++
+1`[(2,up),(4,down),(2,down)]++
+1`[(2,up),(4,down),(3,up)]++
+1`[(2,up),(4,down),(3,up),(2,down)]++
+1`[(2,up),(4,down),(3,up),(3,down),(2,down)]++
+1`[(2,up),(4,down),(3,down)]++
+1`[(2,up),(4,down),(3,down),(2,down)]++
+1`[(2,up),(4,down),(3,down),(3,up),(2,down)]++
+1`[(2,down)]++
+1`[(2,down),(2,up)]++
+1`[(2,down),(2,up),(3,up)]++
+1`[(2,down),(2,up),(3,down)]++
+1`[(2,down),(2,up),(4,down)]++
+1`[(2,down),(3,up)]++
+1`[(2,down),(3,up),(2,up)]++
+1`[(2,down),(3,up),(3,down)]++
+1`[(2,down),(3,up),(4,down)]++
+1`[(2,down),(3,down)]++
+1`[(2,down),(3,down),(2,up)]++
+1`[(2,down),(3,down),(3,up)]++
+1`[(2,down),(3,down),(4,down)]++
+1`[(2,down),(4,down)]++
+1`[(2,down),(4,down),(2,up)]++
+1`[(2,down),(4,down),(3,up)]++
+1`[(2,down),(4,down),(3,down)]++
+1`[(3,up)]++
+1`[(3,up),(2,up)]++
+1`[(3,up),(2,up),(2,down)]++
+1`[(3,up),(2,up),(3,down)]++
+1`[(3,up),(2,up),(3,down),(2,down)]++
+1`[(3,up),(2,up),(3,down),(4,down),(2,down)]++
+1`[(3,up),(2,up),(4,down)]++
+1`[(3,up),(2,up),(4,down),(2,down)]++
+1`[(3,up),(2,up),(4,down),(3,down),(2,down)]++
+1`[(3,up),(2,down)]++
+1`[(3,up),(2,down),(2,up)]++
+1`[(3,up),(2,down),(3,down)]++
+1`[(3,up),(2,down),(4,down)]++
+1`[(3,up),(3,down)]++
+1`[(3,up),(3,down),(2,up)]++
+1`[(3,up),(3,down),(2,up),(2,down)]++
+1`[(3,up),(3,down),(2,up),(4,down),(2,down)]++
+1`[(3,up),(3,down),(2,down)]++
+1`[(3,up),(3,down),(4,down)]++
+1`[(3,up),(3,down),(4,down),(2,up),(2,down)]++
+1`[(3,up),(3,down),(4,down),(2,down)]++
+1`[(3,up),(4,down)]++
+1`[(3,up),(4,down),(2,up)]++
+1`[(3,up),(4,down),(2,up),(2,down)]++
+1`[(3,up),(4,down),(2,up),(3,down),(2,down)]++
+1`[(3,up),(4,down),(2,down)]++
+1`[(3,up),(4,down),(3,down)]++
+1`[(3,up),(4,down),(3,down),(2,up),(2,down)]++
+1`[(3,up),(4,down),(3,down),(2,down)]++
+1`[(3,down)]++
+1`[(3,down),(1,up),(2,down)]++
+1`[(3,down),(1,up),(4,down),(2,down)]++
+1`[(3,down),(2,up)]++
+1`[(3,down),(2,up),(2,down)]++
+1`[(3,down),(2,up),(3,up)]++
+1`[(3,down),(2,up),(3,up),(2,down)]++
+1`[(3,down),(2,up),(3,up),(4,down),(2,down)]++
+1`[(3,down),(2,up),(4,down)]++
+1`[(3,down),(2,up),(4,down),(2,down)]++
+1`[(3,down),(2,up),(4,down),(3,up),(2,down)]++
+1`[(3,down),(2,down)]++
+1`[(3,down),(2,down),(2,up)]++
+1`[(3,down),(2,down),(3,up)]++
+1`[(3,down),(2,down),(4,down)]++
+1`[(3,down),(3,up)]++
+1`[(3,down),(3,up),(2,up)]++
+1`[(3,down),(3,up),(2,up),(2,down)]++
+1`[(3,down),(3,up),(2,up),(4,down),(2,down)]++
+1`[(3,down),(3,up),(2,down)]++
+1`[(3,down),(3,up),(4,down)]++
+1`[(3,down),(3,up),(4,down),(2,up),(2,down)]++
+1`[(3,down),(3,up),(4,down),(2,down)]++
+1`[(3,down),(4,down)]++
+1`[(3,down),(4,down),(1,up),(2,down)]++
+1`[(3,down),(4,down),(2,up)]++
+1`[(3,down),(4,down),(2,up),(2,down)]++
+1`[(3,down),(4,down),(2,up),(3,up),(2,down)]++
+1`[(3,down),(4,down),(2,down)]++
+1`[(3,down),(4,down),(3,up)]++
+1`[(3,down),(4,down),(3,up),(2,up),(2,down)]++
+1`[(3,down),(4,down),(3,up),(2,down)]++
+1`[(4,down)]++
+1`[(4,down),(1,up),(2,down)]++
+1`[(4,down),(1,up),(3,down),(2,down)]++
+1`[(4,down),(2,up)]++
+1`[(4,down),(2,up),(2,down)]++
+1`[(4,down),(2,up),(3,up)]++
+1`[(4,down),(2,up),(3,up),(2,down)]++
+1`[(4,down),(2,up),(3,up),(3,down),(2,down)]++
+1`[(4,down),(2,up),(3,down)]++
+1`[(4,down),(2,up),(3,down),(2,down)]++
+1`[(4,down),(2,up),(3,down),(3,up),(2,down)]++
+1`[(4,down),(2,down)]++
+1`[(4,down),(2,down),(2,up)]++
+1`[(4,down),(2,down),(3,up)]++
+1`[(4,down),(2,down),(3,down)]++
+1`[(4,down),(3,up)]++
+1`[(4,down),(3,up),(2,up)]++
+1`[(4,down),(3,up),(2,up),(2,down)]++
+1`[(4,down),(3,up),(2,up),(3,down),(2,down)]++
+1`[(4,down),(3,up),(2,down)]++
+1`[(4,down),(3,up),(3,down)]++
+1`[(4,down),(3,up),(3,down),(2,up),(2,down)]++
+1`[(4,down),(3,up),(3,down),(2,down)]++
+1`[(4,down),(3,down)]++
+1`[(4,down),(3,down),(1,up),(2,down)]++
+1`[(4,down),(3,down),(2,up)]++
+1`[(4,down),(3,down),(2,up),(2,down)]++
+1`[(4,down),(3,down),(2,up),(3,up),(2,down)]++
+1`[(4,down),(3,down),(2,down)]++
+1`[(4,down),(3,down),(3,up)]++
+1`[(4,down),(3,down),(3,up),(2,up),(2,down)]++
+1`[(4,down),(3,down),(3,up),(2,down)]
+     Main'E2_status 1    1`(1,up)++
+1`(1,down)++
+1`(1,idle)++
+1`(1,emergency)++
+1`(2,up)++
+1`(2,down)++
+1`(2,idle)++
+1`(2,emergency)++
+1`(3,up)++
+1`(3,down)++
+1`(3,idle)++
+1`(3,emergency)++
+1`(4,up)++
+1`(4,down)
+     Main'Hall_floor 1   1`1++
+1`2++
+1`3++
+1`4
+
+  Best Lower Multi-set Bounds
+     Main'Button_clicked 1
+                         empty
+     Main'Direction 1    1`up++
+1`down
+     Main'E1_car_call 1  empty
+     Main'E1_hall_call 1 empty
+     Main'E1_status 1    empty
+     Main'E2_car_call 1  empty
+     Main'E2_hall_call 1 empty
+     Main'E2_status 1    empty
+     Main'Hall_floor 1   1`1++
+1`2++
+1`3++
+1`4
+
+
+ Home Properties
+------------------------------------------------------------------------
+
+  Home Markings
+     None
+
+
+ Liveness Properties
+------------------------------------------------------------------------
+
+  Dead Markings
+     20532 [42615,42614,42613,42612,42611,...]
+
+  Dead Transition Instances
+     None
+
+  Live Transition Instances
+     None
+
+
+ Fairness Properties
+------------------------------------------------------------------------
+
+  Impartial Transition Instances
+     None
+
+  Fair Transition Instances
+     Assign_hall_call'Assign_hall_call_to_E1 1
+     Assign_hall_call'Assign_hall_call_to_E2 1
+
+  Just Transition Instances
+     None
+
+  Transition Instances with No Fairness
+     Execute'Change_hall_call_to_car_call 1
+     Execute'Change_hall_call_to_car_call 2
+     Execute'Exit_emergency 1
+     Execute'Exit_emergency 2
+     Execute'Make_emergency 1
+     Execute'Make_emergency 2
+     Execute'Updating_status 1
+     Execute'Updating_status 2
+     Execute'User_arrived_to_dest 1
+     Execute'User_arrived_to_dest 2
+     Main'Validate_button 1

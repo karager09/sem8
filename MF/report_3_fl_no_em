@@ -1,0 +1,275 @@
+CPN Tools state space report for:
+/cygdrive/D/Studia/Sem. 8/sem8_git/MF/Winda_Karas.cpn
+Report generated: Sun Mar 31 22:30:26 2019
+
+
+ Statistics
+------------------------------------------------------------------------
+
+  State Space
+     Nodes:  47545
+     Arcs:   78188
+     Secs:   600
+     Status: Partial
+
+  Scc Graph
+     Nodes:  24335
+     Arcs:   33505
+     Secs:   115
+
+
+ Boundedness Properties
+------------------------------------------------------------------------
+
+  Best Integer Bounds
+                             Upper      Lower
+     Main'Button_clicked 1   1          0
+     Main'Direction 1        2          2
+     Main'E1_car_call 1      1          1
+     Main'E1_hall_call 1     1          1
+     Main'E1_status 1        1          1
+     Main'E2_car_call 1      1          1
+     Main'E2_hall_call 1     1          1
+     Main'E2_status 1        1          1
+     Main'Hall_floor 1       3          3
+
+  Best Upper Multi-set Bounds
+     Main'Button_clicked 1
+                         1`(1,up)++
+1`(2,up)++
+1`(2,down)++
+1`(3,down)
+     Main'Direction 1    1`up++
+1`down
+     Main'E1_car_call 1  1`[]++
+1`[1]++
+1`[1,2]++
+1`[1,3]++
+1`[2]++
+1`[2,1]++
+1`[2,1,3]++
+1`[2,3]++
+1`[2,3,1]++
+1`[3]++
+1`[3,1]++
+1`[3,2]
+     Main'E1_hall_call 1 1`[]++
+1`[(1,up)]++
+1`[(1,up),(2,up)]++
+1`[(1,up),(2,up),(2,down)]++
+1`[(1,up),(2,up),(2,down),(3,down)]++
+1`[(1,up),(2,up),(3,down)]++
+1`[(1,up),(2,up),(3,down),(2,down)]++
+1`[(1,up),(2,down)]++
+1`[(1,up),(2,down),(2,up)]++
+1`[(1,up),(2,down),(2,up),(3,down)]++
+1`[(1,up),(2,down),(3,down)]++
+1`[(1,up),(2,down),(3,down),(2,up)]++
+1`[(1,up),(3,down)]++
+1`[(1,up),(3,down),(2,up)]++
+1`[(1,up),(3,down),(2,up),(2,down)]++
+1`[(1,up),(3,down),(2,down)]++
+1`[(1,up),(3,down),(2,down),(2,up)]++
+1`[(2,up)]++
+1`[(2,up),(1,up)]++
+1`[(2,up),(1,up),(2,down)]++
+1`[(2,up),(1,up),(2,down),(3,down)]++
+1`[(2,up),(1,up),(3,down)]++
+1`[(2,up),(1,up),(3,down),(2,down)]++
+1`[(2,up),(2,down)]++
+1`[(2,up),(2,down),(1,up)]++
+1`[(2,up),(2,down),(1,up),(3,down)]++
+1`[(2,up),(2,down),(3,down)]++
+1`[(2,up),(2,down),(3,down),(1,up)]++
+1`[(2,up),(3,down)]++
+1`[(2,up),(3,down),(1,up)]++
+1`[(2,up),(3,down),(1,up),(2,down)]++
+1`[(2,up),(3,down),(2,down)]++
+1`[(2,up),(3,down),(2,down),(1,up)]++
+1`[(2,down)]++
+1`[(2,down),(1,up)]++
+1`[(2,down),(1,up),(2,up)]++
+1`[(2,down),(1,up),(2,up),(3,down)]++
+1`[(2,down),(1,up),(3,down)]++
+1`[(2,down),(1,up),(3,down),(2,up)]++
+1`[(2,down),(2,up)]++
+1`[(2,down),(2,up),(1,up)]++
+1`[(2,down),(2,up),(1,up),(3,down)]++
+1`[(2,down),(2,up),(3,down)]++
+1`[(2,down),(2,up),(3,down),(1,up)]++
+1`[(2,down),(3,down)]++
+1`[(2,down),(3,down),(1,up)]++
+1`[(2,down),(3,down),(1,up),(2,up)]++
+1`[(2,down),(3,down),(2,up)]++
+1`[(2,down),(3,down),(2,up),(1,up)]++
+1`[(3,down)]++
+1`[(3,down),(1,up)]++
+1`[(3,down),(1,up),(2,up)]++
+1`[(3,down),(1,up),(2,up),(2,down)]++
+1`[(3,down),(1,up),(2,down)]++
+1`[(3,down),(1,up),(2,down),(2,up)]++
+1`[(3,down),(2,up)]++
+1`[(3,down),(2,up),(1,up)]++
+1`[(3,down),(2,up),(1,up),(2,down)]++
+1`[(3,down),(2,up),(2,down)]++
+1`[(3,down),(2,up),(2,down),(1,up)]++
+1`[(3,down),(2,down)]++
+1`[(3,down),(2,down),(1,up)]++
+1`[(3,down),(2,down),(1,up),(2,up)]++
+1`[(3,down),(2,down),(2,up)]++
+1`[(3,down),(2,down),(2,up),(1,up)]
+     Main'E1_status 1    1`(1,up)++
+1`(1,down)++
+1`(1,idle)++
+1`(2,up)++
+1`(2,down)++
+1`(2,idle)++
+1`(3,up)++
+1`(3,down)++
+1`(3,idle)
+     Main'E2_car_call 1  1`[]++
+1`[1]++
+1`[1,2]++
+1`[1,3]++
+1`[2]++
+1`[2,1]++
+1`[2,3]++
+1`[3]++
+1`[3,1]++
+1`[3,2]
+     Main'E2_hall_call 1 1`[]++
+1`[(1,up)]++
+1`[(1,up),(2,up)]++
+1`[(1,up),(2,up),(2,down)]++
+1`[(1,up),(2,up),(2,down),(3,down)]++
+1`[(1,up),(2,up),(3,down)]++
+1`[(1,up),(2,down)]++
+1`[(1,up),(2,down),(2,up)]++
+1`[(1,up),(2,down),(2,up),(3,down)]++
+1`[(1,up),(2,down),(3,down)]++
+1`[(1,up),(3,down)]++
+1`[(1,up),(3,down),(2,up)]++
+1`[(1,up),(3,down),(2,up),(2,down)]++
+1`[(1,up),(3,down),(2,down)]++
+1`[(1,up),(3,down),(2,down),(2,up)]++
+1`[(2,up)]++
+1`[(2,up),(1,up)]++
+1`[(2,up),(1,up),(2,down)]++
+1`[(2,up),(1,up),(2,down),(3,down)]++
+1`[(2,up),(1,up),(3,down)]++
+1`[(2,up),(2,down)]++
+1`[(2,up),(2,down),(1,up)]++
+1`[(2,up),(2,down),(1,up),(3,down)]++
+1`[(2,up),(2,down),(3,down)]++
+1`[(2,up),(2,down),(3,down),(1,up)]++
+1`[(2,up),(3,down)]++
+1`[(2,up),(3,down),(1,up)]++
+1`[(2,up),(3,down),(2,down)]++
+1`[(2,up),(3,down),(2,down),(1,up)]++
+1`[(2,down)]++
+1`[(2,down),(1,up)]++
+1`[(2,down),(1,up),(2,up)]++
+1`[(2,down),(1,up),(2,up),(3,down)]++
+1`[(2,down),(1,up),(3,down)]++
+1`[(2,down),(2,up)]++
+1`[(2,down),(2,up),(1,up)]++
+1`[(2,down),(2,up),(1,up),(3,down)]++
+1`[(2,down),(2,up),(3,down)]++
+1`[(2,down),(2,up),(3,down),(1,up)]++
+1`[(2,down),(3,down)]++
+1`[(2,down),(3,down),(1,up)]++
+1`[(2,down),(3,down),(2,up)]++
+1`[(2,down),(3,down),(2,up),(1,up)]++
+1`[(3,down)]++
+1`[(3,down),(1,up)]++
+1`[(3,down),(1,up),(2,up)]++
+1`[(3,down),(1,up),(2,up),(2,down)]++
+1`[(3,down),(1,up),(2,down)]++
+1`[(3,down),(1,up),(2,down),(2,up)]++
+1`[(3,down),(2,up)]++
+1`[(3,down),(2,up),(1,up)]++
+1`[(3,down),(2,up),(1,up),(2,down)]++
+1`[(3,down),(2,up),(2,down)]++
+1`[(3,down),(2,up),(2,down),(1,up)]++
+1`[(3,down),(2,down)]++
+1`[(3,down),(2,down),(1,up)]++
+1`[(3,down),(2,down),(1,up),(2,up)]++
+1`[(3,down),(2,down),(2,up)]++
+1`[(3,down),(2,down),(2,up),(1,up)]
+     Main'E2_status 1    1`(1,up)++
+1`(1,down)++
+1`(1,idle)++
+1`(2,up)++
+1`(2,down)++
+1`(2,idle)++
+1`(3,up)++
+1`(3,down)++
+1`(3,idle)
+     Main'Hall_floor 1   1`1++
+1`2++
+1`3
+
+  Best Lower Multi-set Bounds
+     Main'Button_clicked 1
+                         empty
+     Main'Direction 1    1`up++
+1`down
+     Main'E1_car_call 1  empty
+     Main'E1_hall_call 1 empty
+     Main'E1_status 1    empty
+     Main'E2_car_call 1  empty
+     Main'E2_hall_call 1 empty
+     Main'E2_status 1    empty
+     Main'Hall_floor 1   1`1++
+1`2++
+1`3
+
+
+ Home Properties
+------------------------------------------------------------------------
+
+  Home Markings
+     None
+
+
+ Liveness Properties
+------------------------------------------------------------------------
+
+  Dead Markings
+     12533 [47545,47544,47543,47542,47541,...]
+
+  Dead Transition Instances
+     Execute'Exit_emergency 1
+     Execute'Exit_emergency 2
+     Execute'Make_emergency 1
+     Execute'Make_emergency 2
+
+  Live Transition Instances
+     None
+
+
+ Fairness Properties
+------------------------------------------------------------------------
+
+  Impartial Transition Instances
+     None
+
+  Fair Transition Instances
+     Assign_hall_call'Assign_hall_call_to_E1 1
+     Assign_hall_call'Assign_hall_call_to_E2 1
+     Execute'Exit_emergency 1
+     Execute'Exit_emergency 2
+     Execute'Make_emergency 1
+     Execute'Make_emergency 2
+
+  Just Transition Instances
+     None
+
+  Transition Instances with No Fairness
+     Execute'Change_hall_call_to_car_call 1
+     Execute'Change_hall_call_to_car_call 2
+     Execute'Updating_status 1
+     Execute'Updating_status 2
+     Execute'User_arrived_to_dest 1
+     Execute'User_arrived_to_dest 2
+     Main'Validate_button 1

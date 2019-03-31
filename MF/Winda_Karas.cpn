@@ -512,7 +512,7 @@ clicked</text>
         <text>E1_hall_call</text>
         <ellipse w="82.599341"
                  h="40.000000"/>
-        <token x="-44.000000"
+        <token x="-55.299671"
                y="24.000000"/>
         <marking x="0.000000"
                  y="0.000000"
@@ -536,7 +536,7 @@ clicked</text>
                 version="4.0.1">HALL_CALL_LIST</text>
         </type>
         <initmark id="ID1412918364">
-          <posattr x="202.000000"
+          <posattr x="183.000000"
                    y="178.000000"/>
           <fillattr colour="White"
                     pattern="Solid"
@@ -547,12 +547,12 @@ clicked</text>
           <textattr colour="Black"
                     bold="false"/>
           <text tool="CPN Tools"
-                version="4.0.1">[(1,up)]</text>
+                version="4.0.1">[]</text>
         </initmark>
       </place>
       <place id="ID1412922436">
-        <posattr x="-462.000000"
-                 y="154.718569"/>
+        <posattr x="-446.000000"
+                 y="154.000000"/>
         <fillattr colour="White"
                   pattern=""
                   filled="false"/>
@@ -574,7 +574,7 @@ clicked</text>
                 anchor.vertical="0"/>
         </marking>
         <type id="ID1412922437">
-          <posattr x="-390.500000"
+          <posattr x="-374.500000"
                    y="130.000000"/>
           <fillattr colour="White"
                     pattern="Solid"
@@ -588,8 +588,8 @@ clicked</text>
                 version="4.0.1">RANGE_LIST</text>
         </type>
         <initmark id="ID1412922438">
-          <posattr x="-424.000000"
-                   y="178.000000"/>
+          <posattr x="-408.000000"
+                   y="177.000000"/>
           <fillattr colour="White"
                     pattern="Solid"
                     filled="false"/>
@@ -603,8 +603,8 @@ clicked</text>
         </initmark>
       </place>
       <place id="ID1412922661">
-        <posattr x="-588.000000"
-                 y="154.718569"/>
+        <posattr x="-557.000000"
+                 y="154.000000"/>
         <fillattr colour="White"
                   pattern=""
                   filled="false"/>
@@ -626,7 +626,7 @@ clicked</text>
                 anchor.vertical="0"/>
         </marking>
         <type id="ID1412922662">
-          <posattr x="-501.500000"
+          <posattr x="-470.500000"
                    y="130.000000"/>
           <fillattr colour="White"
                     pattern="Solid"
@@ -640,8 +640,8 @@ clicked</text>
                 version="4.0.1">HALL_CALL_LIST</text>
         </type>
         <initmark id="ID1412922663">
-          <posattr x="-518.500000"
-                   y="178.000000"/>
+          <posattr x="-518.000000"
+                   y="177.000000"/>
           <fillattr colour="White"
                     pattern="Solid"
                     filled="false"/>
@@ -651,7 +651,7 @@ clicked</text>
           <textattr colour="Black"
                     bold="false"/>
           <text tool="CPN Tools"
-                version="4.0.1">[(2, down)]</text>
+                version="4.0.1">[]</text>
         </initmark>
       </place>
       <place id="ID1412964518">
@@ -777,8 +777,8 @@ button</text>
         <binding x="7.200000"
                  y="-3.000000"/>
         <cond id="ID1412374153">
-          <posattr x="-430.500000"
-                   y="439.000000"/>
+          <posattr x="-402.500000"
+                   y="433.000000"/>
           <fillattr colour="White"
                     pattern="Solid"
                     filled="false"/>
@@ -1022,7 +1022,7 @@ hall_call</text>
       </trans>
       <trans id="ID1413245961"
              explicit="false">
-        <posattr x="-462.000000"
+        <posattr x="-446.000000"
                  y="42.000000"/>
         <fillattr colour="White"
                   pattern=""
@@ -1040,7 +1040,7 @@ Elev 2</text>
                portsock="(ID1412997426,ID1412964809)(ID1412997436,ID1412922661)(ID1412997431,ID1412922436)">
           <subpageinfo id="ID1413245973"
                        name="Execute">
-            <posattr x="-462.000000"
+            <posattr x="-446.000000"
                      y="18.000000"/>
             <fillattr colour="White"
                       pattern="Solid"
@@ -1055,7 +1055,7 @@ Elev 2</text>
         <binding x="7.200000"
                  y="-3.000000"/>
         <cond id="ID1413245962">
-          <posattr x="-501.000000"
+          <posattr x="-485.000000"
                    y="73.000000"/>
           <fillattr colour="White"
                     pattern="Solid"
@@ -1069,7 +1069,7 @@ Elev 2</text>
                 version="4.0.1"/>
         </cond>
         <time id="ID1413245963">
-          <posattr x="-417.500000"
+          <posattr x="-401.500000"
                    y="73.000000"/>
           <fillattr colour="White"
                     pattern="Solid"
@@ -1083,7 +1083,7 @@ Elev 2</text>
                 version="4.0.1"/>
         </time>
         <code id="ID1413245964">
-          <posattr x="-397.500000"
+          <posattr x="-381.500000"
                    y="-10.000000"/>
           <fillattr colour="White"
                     pattern="Solid"
@@ -1097,7 +1097,7 @@ Elev 2</text>
                 version="4.0.1"/>
         </code>
         <priority id="ID1413245966">
-          <posattr x="-530.000000"
+          <posattr x="-514.000000"
                    y="11.000000"/>
           <fillattr colour="White"
                     pattern="Solid"
@@ -1609,7 +1609,7 @@ Elev 2</text>
         <transend idref="ID1412374152"/>
         <placeend idref="ID1412922661"/>
         <annot id="ID1413352193">
-          <posattr x="-436.000000"
+          <posattr x="-420.000000"
                    y="295.000000"/>
           <fillattr colour="White"
                     pattern="Solid"
@@ -1626,12 +1626,12 @@ Elev 2</text>
       <constraints/>
       <hguideline id="ID1412976512"
                   y="-154.718569">
-        <guideline_elm idref="ID1412922436"/>
-        <guideline_elm idref="ID1412922661"/>
         <guideline_elm idref="ID1412964809"/>
         <guideline_elm idref="ID1412916594"/>
         <guideline_elm idref="ID1412916732"/>
         <guideline_elm idref="ID1412964518"/>
+        <guideline_elm idref="ID1412922436"/>
+        <guideline_elm idref="ID1412922661"/>
       </hguideline>
       <hguideline id="ID1412978170"
                   y="-516.308033">
@@ -2072,7 +2072,7 @@ to dest</text>
       </trans>
       <trans id="ID1413481021"
              explicit="false">
-        <posattr x="-420.000000"
+        <posattr x="-398.000000"
                  y="-42.000000"/>
         <fillattr colour="White"
                   pattern=""
@@ -2089,7 +2089,7 @@ emergency</text>
         <binding x="7.200000"
                  y="-3.000000"/>
         <cond id="ID1413481022">
-          <posattr x="-518.000000"
+          <posattr x="-496.000000"
                    y="-4.000000"/>
           <fillattr colour="White"
                     pattern="Solid"
@@ -2100,11 +2100,11 @@ emergency</text>
           <textattr colour="Black"
                     bold="false"/>
           <text tool="CPN Tools"
-                version="4.0.1">discrete(1,10) = 1
+                version="4.0.1">discrete(1,100) = 1
 andalso not(stat = emergency)</text>
         </cond>
         <time id="ID1413481023">
-          <posattr x="-362.500000"
+          <posattr x="-340.500000"
                    y="-11.000000"/>
           <fillattr colour="White"
                     pattern="Solid"
@@ -2118,7 +2118,7 @@ andalso not(stat = emergency)</text>
                 version="4.0.1"/>
         </time>
         <code id="ID1413481024">
-          <posattr x="-342.500000"
+          <posattr x="-320.500000"
                    y="-94.000000"/>
           <fillattr colour="White"
                     pattern="Solid"
@@ -2132,7 +2132,7 @@ andalso not(stat = emergency)</text>
                 version="4.0.1"/>
         </code>
         <priority id="ID1413505052">
-          <posattr x="-501.000000"
+          <posattr x="-479.000000"
                    y="-73.000000"/>
           <fillattr colour="White"
                     pattern="Solid"
@@ -2148,8 +2148,8 @@ andalso not(stat = emergency)</text>
       </trans>
       <trans id="ID1413485602"
              explicit="false">
-        <posattr x="-311.000000"
-                 y="-179.000000"/>
+        <posattr x="-394.000000"
+                 y="-239.000000"/>
         <fillattr colour="White"
                   pattern=""
                   filled="false"/>
@@ -2165,8 +2165,8 @@ emergency</text>
         <binding x="7.200000"
                  y="-3.000000"/>
         <cond id="ID1413485603">
-          <posattr x="-413.500000"
-                   y="-148.000000"/>
+          <posattr x="-496.500000"
+                   y="-208.000000"/>
           <fillattr colour="White"
                     pattern="Solid"
                     filled="false"/>
@@ -2179,8 +2179,8 @@ emergency</text>
                 version="4.0.1">stat = emergency</text>
         </cond>
         <time id="ID1413485604">
-          <posattr x="-253.500000"
-                   y="-148.000000"/>
+          <posattr x="-336.500000"
+                   y="-208.000000"/>
           <fillattr colour="White"
                     pattern="Solid"
                     filled="false"/>
@@ -2193,8 +2193,8 @@ emergency</text>
                 version="4.0.1"/>
         </time>
         <code id="ID1413485605">
-          <posattr x="-233.500000"
-                   y="-231.000000"/>
+          <posattr x="-316.500000"
+                   y="-291.000000"/>
           <fillattr colour="White"
                     pattern="Solid"
                     filled="false"/>
@@ -2207,8 +2207,8 @@ emergency</text>
                 version="4.0.1"/>
         </code>
         <priority id="ID1413485607">
-          <posattr x="-392.000000"
-                   y="-210.000000"/>
+          <posattr x="-475.000000"
+                   y="-270.000000"/>
           <fillattr colour="White"
                     pattern="Solid"
                     filled="false"/>
@@ -2654,7 +2654,7 @@ else (rmall (curr_floor, stat) hall_call_list)</text>
         <transend idref="ID1413481021"/>
         <placeend idref="ID1412997426"/>
         <annot id="ID1413481519">
-          <posattr x="-278.000000"
+          <posattr x="-268.000000"
                    y="-24.000000"/>
           <fillattr colour="White"
                     pattern="Solid"
@@ -2686,7 +2686,7 @@ else (rmall (curr_floor, stat) hall_call_list)</text>
         <transend idref="ID1413481021"/>
         <placeend idref="ID1412997426"/>
         <annot id="ID1413482151">
-          <posattr x="-283.000000"
+          <posattr x="-272.000000"
                    y="-60.000000"/>
           <fillattr colour="White"
                     pattern="Solid"
@@ -2718,8 +2718,8 @@ else (rmall (curr_floor, stat) hall_call_list)</text>
         <transend idref="ID1413485602"/>
         <placeend idref="ID1412997426"/>
         <annot id="ID1413487294">
-          <posattr x="-289.500000"
-                   y="-95.000000"/>
+          <posattr x="-344.500000"
+                   y="-136.000000"/>
           <fillattr colour="White"
                     pattern="Solid"
                     filled="false"/>
@@ -2750,8 +2750,8 @@ else (rmall (curr_floor, stat) hall_call_list)</text>
         <transend idref="ID1413485602"/>
         <placeend idref="ID1412997426"/>
         <annot id="ID1413488056">
-          <posattr x="-193.000000"
-                   y="-142.000000"/>
+          <posattr x="-236.000000"
+                   y="-172.000000"/>
           <fillattr colour="White"
                     pattern="Solid"
                     filled="false"/>
@@ -2779,7 +2779,7 @@ else (rmall (curr_floor, stat) hall_call_list)</text>
     <page id="ID1413113278">
       <pageattr name="Assign hall_call"/>
       <place id="ID1413113286">
-        <posattr x="313.000000"
+        <posattr x="252.000000"
                  y="219.000000"/>
         <fillattr colour="White"
                   pattern=""
@@ -2802,7 +2802,7 @@ else (rmall (curr_floor, stat) hall_call_list)</text>
                 anchor.vertical="0"/>
         </marking>
         <type id="ID1413113287">
-          <posattr x="403.500000"
+          <posattr x="342.500000"
                    y="195.000000"/>
           <fillattr colour="White"
                     pattern="Solid"
@@ -2816,7 +2816,7 @@ else (rmall (curr_floor, stat) hall_call_list)</text>
                 version="4.0.1">HALL_CALL_LIST</text>
         </type>
         <initmark id="ID1413113288">
-          <posattr x="383.000000"
+          <posattr x="322.000000"
                    y="242.000000"/>
           <fillattr colour="White"
                     pattern="Solid"
@@ -2831,7 +2831,7 @@ else (rmall (curr_floor, stat) hall_call_list)</text>
         </initmark>
         <port id="ID1413113361"
               type="I/O">
-          <posattr x="274.000000"
+          <posattr x="213.000000"
                    y="202.000000"/>
           <fillattr colour="White"
                     pattern="Solid"
@@ -2974,7 +2974,7 @@ else (rmall (curr_floor, stat) hall_call_list)</text>
         </port>
       </place>
       <place id="ID1413113303">
-        <posattr x="22.000000"
+        <posattr x="-42.000000"
                  y="-42.000000"/>
         <fillattr colour="White"
                   pattern=""
@@ -2997,7 +2997,7 @@ else (rmall (curr_floor, stat) hall_call_list)</text>
                 anchor.vertical="0"/>
         </marking>
         <type id="ID1413113304">
-          <posattr x="96.000000"
+          <posattr x="33.000000"
                    y="-65.000000"/>
           <fillattr colour="White"
                     pattern="Solid"
@@ -3011,7 +3011,7 @@ else (rmall (curr_floor, stat) hall_call_list)</text>
                 version="4.0.1">EL_STATUS</text>
         </type>
         <initmark id="ID1413113305">
-          <posattr x="93.000000"
+          <posattr x="30.000000"
                    y="-18.000000"/>
           <fillattr colour="White"
                     pattern="Solid"
@@ -3026,7 +3026,7 @@ else (rmall (curr_floor, stat) hall_call_list)</text>
         </initmark>
         <port id="ID1413113373"
               type="I/O">
-          <posattr x="-17.000000"
+          <posattr x="-81.000000"
                    y="-58.000000"/>
           <fillattr colour="White"
                     pattern="Solid"
@@ -3040,7 +3040,7 @@ else (rmall (curr_floor, stat) hall_call_list)</text>
       </place>
       <place id="ID1413113310">
         <posattr x="-210.000000"
-                 y="436.000000"/>
+                 y="480.000000"/>
         <fillattr colour="White"
                   pattern=""
                   filled="false"/>
@@ -3064,7 +3064,7 @@ clicked</text>
         </marking>
         <type id="ID1413113311">
           <posattr x="-142.000000"
-                   y="412.000000"/>
+                   y="456.000000"/>
           <fillattr colour="White"
                     pattern="Solid"
                     filled="false"/>
@@ -3078,7 +3078,7 @@ clicked</text>
         </type>
         <initmark id="ID1413113312">
           <posattr x="-145.000000"
-                   y="459.000000"/>
+                   y="503.000000"/>
           <fillattr colour="White"
                     pattern="Solid"
                     filled="false"/>
@@ -3093,7 +3093,7 @@ clicked</text>
         <port id="ID1413113377"
               type="In">
           <posattr x="-242.000000"
-                   y="419.000000"/>
+                   y="463.000000"/>
           <fillattr colour="White"
                     pattern="Solid"
                     filled="false"/>
@@ -3106,7 +3106,7 @@ clicked</text>
       </place>
       <trans id="ID1413113280"
              explicit="false">
-        <posattr x="22.000000"
+        <posattr x="-42.000000"
                  y="219.000000"/>
         <fillattr colour="White"
                   pattern=""
@@ -3124,8 +3124,8 @@ to E1</text>
         <binding x="7.200000"
                  y="-3.000000"/>
         <cond id="ID1413113281">
-          <posattr x="-74.000000"
-                   y="332.000000"/>
+          <posattr x="27.000000"
+                   y="320.000000"/>
           <fillattr colour="White"
                     pattern="Solid"
                     filled="false"/>
@@ -3144,10 +3144,10 @@ andalso (stat1 = idle
 orelse (stat1 = required_status(curr_floor1, hall_floor) 
     andalso stat1 = direction
     andalso not(stat2 = direction))
-andalso not(stat1 = emergency)</text>
+andalso (not(stat1 = emergency) orelse stat2=emergency)</text>
         </cond>
         <time id="ID1413113282">
-          <posattr x="66.500000"
+          <posattr x="2.500000"
                    y="250.869205"/>
           <fillattr colour="White"
                     pattern="Solid"
@@ -3161,7 +3161,7 @@ andalso not(stat1 = emergency)</text>
                 version="4.0.1"/>
         </time>
         <code id="ID1413113283">
-          <posattr x="86.500000"
+          <posattr x="22.500000"
                    y="166.130795"/>
           <fillattr colour="White"
                     pattern="Solid"
@@ -3175,7 +3175,7 @@ andalso not(stat1 = emergency)</text>
                 version="4.0.1"/>
         </code>
         <priority id="ID1413113285">
-          <posattr x="-36.000000"
+          <posattr x="-100.000000"
                    y="187.130795"/>
           <fillattr colour="White"
                     pattern="Solid"
@@ -3209,8 +3209,8 @@ to E2</text>
         <binding x="7.200000"
                  y="-3.000000"/>
         <cond id="ID1413466489">
-          <posattr x="-490.000000"
-                   y="331.000000"/>
+          <posattr x="-445.000000"
+                   y="333.000000"/>
           <fillattr colour="White"
                     pattern="Solid"
                     filled="false"/>
@@ -3228,8 +3228,8 @@ andalso (stat1 = idle
     orelse not(stat2 = required_status(curr_floor2, hall_floor)))
 orelse (stat1 = required_status(curr_floor1, hall_floor) 
     andalso stat1 = direction
-    andalso not(stat2 = direction)))
-andalso not(stat2 = emergency)</text>
+    andalso not(stat2 = direction))
+andalso (not(stat1 = emergency) orelse stat2=emergency))</text>
         </cond>
         <time id="ID1413114754">
           <posattr x="-351.500000"
@@ -3292,7 +3292,7 @@ andalso not(stat2 = emergency)</text>
         <transend idref="ID1413113280"/>
         <placeend idref="ID1413113286"/>
         <annot id="ID1413113290">
-          <posattr x="168.000000"
+          <posattr x="106.000000"
                    y="223.000000"/>
           <fillattr colour="White"
                     pattern="Solid"
@@ -3324,8 +3324,8 @@ andalso not(stat2 = emergency)</text>
         <transend idref="ID1413113280"/>
         <placeend idref="ID1413113291"/>
         <annot id="ID1413113295">
-          <posattr x="-225.500000"
-                   y="8.000000"/>
+          <posattr x="-243.500000"
+                   y="7.000000"/>
           <fillattr colour="White"
                     pattern="Solid"
                     filled="false"/>
@@ -3356,7 +3356,7 @@ andalso not(stat2 = emergency)</text>
         <transend idref="ID1413113280"/>
         <placeend idref="ID1413113286"/>
         <annot id="ID1413113302">
-          <posattr x="158.000000"
+          <posattr x="96.000000"
                    y="237.000000"/>
           <fillattr colour="White"
                     pattern="Solid"
@@ -3388,7 +3388,7 @@ andalso not(stat2 = emergency)</text>
         <transend idref="ID1413113280"/>
         <placeend idref="ID1413113303"/>
         <annot id="ID1413113307">
-          <posattr x="85.500000"
+          <posattr x="21.500000"
                    y="67.000000"/>
           <fillattr colour="White"
                     pattern="Solid"
@@ -3420,8 +3420,8 @@ andalso not(stat2 = emergency)</text>
         <transend idref="ID1413113280"/>
         <placeend idref="ID1413113310"/>
         <annot id="ID1413113314">
-          <posattr x="-88.000000"
-                   y="390.000000"/>
+          <posattr x="-97.000000"
+                   y="413.000000"/>
           <fillattr colour="White"
                     pattern="Solid"
                     filled="false"/>
@@ -3484,8 +3484,8 @@ andalso not(stat2 = emergency)</text>
         <transend idref="ID1413114752"/>
         <placeend idref="ID1413113310"/>
         <annot id="ID1413123171">
-          <posattr x="-319.000000"
-                   y="397.000000"/>
+          <posattr x="-324.000000"
+                   y="425.000000"/>
           <fillattr colour="White"
                     pattern="Solid"
                     filled="false"/>
@@ -3548,8 +3548,8 @@ andalso not(stat2 = emergency)</text>
         <transend idref="ID1413114752"/>
         <placeend idref="ID1413113303"/>
         <annot id="ID1413124438">
-          <posattr x="-220.500000"
-                   y="158.000000"/>
+          <posattr x="-238.500000"
+                   y="159.000000"/>
           <fillattr colour="White"
                     pattern="Solid"
                     filled="false"/>
@@ -3601,10 +3601,10 @@ andalso not(stat2 = emergency)</text>
       </hguideline>
       <hguideline id="ID1413116791"
                   y="-219.000000">
-        <guideline_elm idref="ID1413113280"/>
         <guideline_elm idref="ID1413114752"/>
-        <guideline_elm idref="ID1413113286"/>
         <guideline_elm idref="ID1413113296"/>
+        <guideline_elm idref="ID1413113280"/>
+        <guideline_elm idref="ID1413113286"/>
       </hguideline>
     </page>
     <instances>
@@ -3862,14 +3862,14 @@ andalso not(stat2 = emergency)</text>
     </options>
     <binders>
       <cpnbinder id="ID2222"
-                 x="660"
-                 y="185"
-                 width="1209"
-                 height="876">
+                 x="312"
+                 y="138"
+                 width="1000"
+                 height="727">
         <sheets>
           <cpnsheet id="ID2215"
-                    panx="192.000000"
-                    pany="309.000000"
+                    panx="173.000000"
+                    pany="314.000000"
                     zoom="1.150476"
                     instance="ID2149">
             <zorder>
@@ -3877,8 +3877,8 @@ andalso not(stat2 = emergency)</text>
             </zorder>
           </cpnsheet>
           <cpnsheet id="ID1413113650"
-                    panx="146.000000"
-                    pany="180.000000"
+                    panx="180.000000"
+                    pany="204.000000"
                     zoom="1.000000"
                     instance="ID1413113336">
             <zorder>
@@ -3886,8 +3886,8 @@ andalso not(stat2 = emergency)</text>
             </zorder>
           </cpnsheet>
           <cpnsheet id="ID1413347413"
-                    panx="60.000000"
-                    pany="-67.000000"
+                    panx="-73.000000"
+                    pany="7.000000"
                     zoom="1.000000"
                     instance="ID1412997456">
             <zorder>
@@ -3895,8 +3895,8 @@ andalso not(stat2 = emergency)</text>
             </zorder>
           </cpnsheet>
           <cpnsheet id="ID1413349786"
-                    panx="81.000000"
-                    pany="-55.000000"
+                    panx="-93.000000"
+                    pany="-42.000000"
                     zoom="1.000000"
                     instance="ID1413245974">
             <zorder>
