@@ -53,8 +53,8 @@
           <id>STRING</id>
           <string/>
         </color>
-        <ml id="ID1412323821">val Floors_no = 5;
-          <layout>val Floors_no = 5;</layout>
+        <ml id="ID1412323821">val Floors_no = 3;
+          <layout>val Floors_no = 3;</layout>
         </ml>
         <ml id="ID1413099062">val Park_floor = 1;
           <layout>val Park_floor = 1;</layout>
@@ -2079,7 +2079,7 @@ to dest</text>
                   filled="false"/>
         <lineattr colour="Black"
                   thick="1"
-                  type="Solid"/>
+                  type="solid"/>
         <textattr colour="Black"
                   bold="false"/>
         <text>Make
@@ -2088,9 +2088,9 @@ emergency</text>
              h="40.000000"/>
         <binding x="7.200000"
                  y="-3.000000"/>
-        <cond id="ID1413481022">
-          <posattr x="-496.000000"
-                   y="-4.000000"/>
+        <cond id="ID1413508475">
+          <posattr x="-450.000000"
+                   y="-11.000000"/>
           <fillattr colour="White"
                     pattern="Solid"
                     filled="false"/>
@@ -2100,8 +2100,7 @@ emergency</text>
           <textattr colour="Black"
                     bold="false"/>
           <text tool="CPN Tools"
-                version="4.0.1">discrete(1,100) = 1
-andalso not(stat = emergency)</text>
+                version="4.0.1"/>
         </cond>
         <time id="ID1413481023">
           <posattr x="-340.500000"
@@ -2155,7 +2154,7 @@ andalso not(stat = emergency)</text>
                   filled="false"/>
         <lineattr colour="Black"
                   thick="1"
-                  type="Solid"/>
+                  type="solid"/>
         <textattr colour="Black"
                   bold="false"/>
         <text>Exit
@@ -2410,11 +2409,11 @@ emergency</text>
           <textattr colour="Black"
                     bold="false"/>
           <text tool="CPN Tools"
-                version="4.0.1">remdupl (change_to_car_call(
+                version="4.0.1">sort RANGE.lt (remdupl (change_to_car_call(
    curr_floor, 
    if (stat = up orelse stat = idle) then (length (intersect hall_call_list [(curr_floor, up)])) else 0, 
    if (stat = down orelse stat = idle) then (length (intersect hall_call_list [(curr_floor, down)])) else 0, 
-   car_call_list))</text>
+   car_call_list)))</text>
         </annot>
       </arc>
       <arc id="ID1413021243"
@@ -2775,6 +2774,21 @@ else (rmall (curr_floor, stat) hall_call_list)</text>
         <guideline_elm idref="ID1413020410"/>
         <guideline_elm idref="ID1413002333"/>
       </hguideline>
+      <Aux id="ID1413507086">
+        <posattr x="-565.000000"
+                 y="52.000000"/>
+        <fillattr colour="White"
+                  pattern=""
+                  filled="false"/>
+        <lineattr colour="Black"
+                  thick="1"
+                  type="Solid"/>
+        <textattr colour="Black"
+                  bold="false"/>
+        <label/>
+        <text>discrete(1,100) = 1
+andalso not(stat = emergency)</text>
+      </Aux>
     </page>
     <page id="ID1413113278">
       <pageattr name="Assign hall_call"/>
@@ -3125,7 +3139,7 @@ to E1</text>
                  y="-3.000000"/>
         <cond id="ID1413113281">
           <posattr x="27.000000"
-                   y="320.000000"/>
+                   y="327.000000"/>
           <fillattr colour="White"
                     pattern="Solid"
                     filled="false"/>
@@ -3135,7 +3149,7 @@ to E1</text>
           <textattr colour="Black"
                     bold="false"/>
           <text tool="CPN Tools"
-                version="4.0.1">(abs(curr_floor1 - hall_floor) &lt;= abs(curr_floor2 - hall_floor))
+                version="4.0.1">((abs(curr_floor1 - hall_floor) &lt;= abs(curr_floor2 - hall_floor))
 andalso (stat1 = idle 
     orelse curr_floor1 - hall_floor = 0
     orelse (stat1 = required_status(curr_floor1, hall_floor)
@@ -3144,7 +3158,8 @@ andalso (stat1 = idle
 orelse (stat1 = required_status(curr_floor1, hall_floor) 
     andalso stat1 = direction
     andalso not(stat2 = direction))
-andalso (not(stat1 = emergency) orelse stat2=emergency)</text>
+) andalso not(stat1 = emergency)
+orelse (stat2 = emergency)</text>
         </cond>
         <time id="ID1413113282">
           <posattr x="2.500000"
@@ -3210,7 +3225,7 @@ to E2</text>
                  y="-3.000000"/>
         <cond id="ID1413466489">
           <posattr x="-445.000000"
-                   y="333.000000"/>
+                   y="340.000000"/>
           <fillattr colour="White"
                     pattern="Solid"
                     filled="false"/>
@@ -3220,7 +3235,7 @@ to E2</text>
           <textattr colour="Black"
                     bold="false"/>
           <text tool="CPN Tools"
-                version="4.0.1">not((abs(curr_floor1 - hall_floor) &lt;= abs(curr_floor2 - hall_floor))
+                version="4.0.1">(not((abs(curr_floor1 - hall_floor) &lt;= abs(curr_floor2 - hall_floor))
 andalso (stat1 = idle 
     orelse curr_floor1 - hall_floor = 0
     orelse (stat1 = required_status(curr_floor1, hall_floor)
@@ -3228,8 +3243,9 @@ andalso (stat1 = idle
     orelse not(stat2 = required_status(curr_floor2, hall_floor)))
 orelse (stat1 = required_status(curr_floor1, hall_floor) 
     andalso stat1 = direction
-    andalso not(stat2 = direction))
-andalso (not(stat1 = emergency) orelse stat2=emergency))</text>
+    andalso not(stat2 = direction)))
+) andalso not(stat2 = emergency)
+orelse (stat1 = emergency)</text>
         </cond>
         <time id="ID1413114754">
           <posattr x="-351.500000"
@@ -3367,7 +3383,7 @@ andalso (not(stat1 = emergency) orelse stat2=emergency))</text>
           <textattr colour="Black"
                     bold="false"/>
           <text tool="CPN Tools"
-                version="4.0.1">(hall_floor, direction)::hall_call_list</text>
+                version="4.0.1">sort HALL_CALL.lt ((hall_floor, direction)::hall_call_list)</text>
         </annot>
       </arc>
       <arc id="ID1413113306"
@@ -3591,7 +3607,7 @@ andalso (not(stat1 = emergency) orelse stat2=emergency))</text>
           <textattr colour="Black"
                     bold="false"/>
           <text tool="CPN Tools"
-                version="4.0.1">(hall_floor, direction)::hall_call_list</text>
+                version="4.0.1">sort HALL_CALL.lt ((hall_floor, direction)::hall_call_list)</text>
         </annot>
       </arc>
       <constraints/>
@@ -3654,12 +3670,12 @@ andalso (not(stat1 = emergency) orelse stat2=emergency))</text>
           <boolean>true</boolean>
         </value>
       </option>
-      <option name="extensions.10005.enable">
+      <option name="extensions.10006.enable">
         <value>
           <boolean>true</boolean>
         </value>
       </option>
-      <option name="extensions.10006.enable">
+      <option name="extensions.10005.enable">
         <value>
           <boolean>true</boolean>
         </value>
@@ -3862,14 +3878,14 @@ andalso (not(stat1 = emergency) orelse stat2=emergency))</text>
     </options>
     <binders>
       <cpnbinder id="ID2222"
-                 x="312"
-                 y="138"
-                 width="1000"
-                 height="727">
+                 x="386"
+                 y="157"
+                 width="1164"
+                 height="705">
         <sheets>
           <cpnsheet id="ID2215"
-                    panx="173.000000"
-                    pany="314.000000"
+                    panx="212.000000"
+                    pany="321.000000"
                     zoom="1.150476"
                     instance="ID2149">
             <zorder>
@@ -3886,8 +3902,8 @@ andalso (not(stat1 = emergency) orelse stat2=emergency))</text>
             </zorder>
           </cpnsheet>
           <cpnsheet id="ID1413347413"
-                    panx="-73.000000"
-                    pany="7.000000"
+                    panx="-35.000000"
+                    pany="-20.000000"
                     zoom="1.000000"
                     instance="ID1412997456">
             <zorder>
@@ -3895,8 +3911,8 @@ andalso (not(stat1 = emergency) orelse stat2=emergency))</text>
             </zorder>
           </cpnsheet>
           <cpnsheet id="ID1413349786"
-                    panx="-93.000000"
-                    pany="-42.000000"
+                    panx="-44.000000"
+                    pany="-46.000000"
                     zoom="1.000000"
                     instance="ID1413245974">
             <zorder>
@@ -3978,9 +3994,7 @@ andalso (not(stat1 = emergency) orelse stat2=emergency))</text>
           <IndexNode expanded="false"/>
         </IndexNode>
       </IndexNode>
-      <IndexNode expanded="false">
-        <IndexNode expanded="false"/>
-      </IndexNode>
+      <IndexNode expanded="false"/>
       <IndexNode expanded="true">
         <IndexNode expanded="false">
           <IndexNode expanded="true"/>
@@ -4011,7 +4025,7 @@ andalso (not(stat1 = emergency) orelse stat2=emergency))</text>
           <IndexNode expanded="true"/>
           <IndexNode expanded="true"/>
           <IndexNode expanded="false"/>
-          <IndexNode expanded="false"/>
+          <IndexNode expanded="true"/>
           <IndexNode expanded="false"/>
           <IndexNode expanded="true"/>
         </IndexNode>

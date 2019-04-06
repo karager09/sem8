@@ -1,21 +1,21 @@
 CPN Tools state space report for:
 /cygdrive/D/Studia/Sem. 8/sem8_git/MF/Winda_Karas.cpn
-Report generated: Tue Apr  2 19:18:53 2019
+Report generated: Tue Apr  2 18:54:06 2019
 
 
  Statistics
 ------------------------------------------------------------------------
 
   State Space
-     Nodes:  60024
-     Arcs:   109538
+     Nodes:  55400
+     Arcs:   97434
      Secs:   300
      Status: Partial
 
   Scc Graph
-     Nodes:  17156
-     Arcs:   24629
-     Secs:   77
+     Nodes:  20501
+     Arcs:   28943
+     Secs:   95
 
 
  Boundedness Properties
@@ -44,11 +44,15 @@ Report generated: Tue Apr  2 19:18:53 2019
      Main'E1_car_call 1  1`[]++
 1`[1]++
 1`[1,2]++
-1`[1,2,3]++
 1`[1,3]++
 1`[2]++
+1`[2,1]++
+1`[2,1,3]++
 1`[2,3]++
-1`[3]
+1`[2,3,1]++
+1`[3]++
+1`[3,1]++
+1`[3,2]
      Main'E1_hall_call 1 1`[]++
 1`[(1,up)]++
 1`[(1,up),(2,up)]++
@@ -77,11 +81,14 @@ Report generated: Tue Apr  2 19:18:53 2019
      Main'E2_car_call 1  1`[]++
 1`[1]++
 1`[1,2]++
-1`[1,2,3]++
 1`[1,3]++
 1`[2]++
+1`[2,1]++
+1`[2,1,3]++
 1`[2,3]++
-1`[3]
+1`[3]++
+1`[3,1]++
+1`[3,2]
      Main'E2_hall_call 1 1`[]++
 1`[(1,up)]++
 1`[(1,up),(2,up)]++
@@ -138,7 +145,7 @@ Report generated: Tue Apr  2 19:18:53 2019
 ------------------------------------------------------------------------
 
   Dead Markings
-     8778 [60024,60023,60022,60021,60020,...]
+     10680 [55400,55399,55398,55397,55396,...]
 
   Dead Transition Instances
      Execute'Exit_emergency 1

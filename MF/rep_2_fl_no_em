@@ -1,21 +1,21 @@
 CPN Tools state space report for:
 /cygdrive/D/Studia/Sem. 8/sem8_git/MF/Winda_Karas.cpn
-Report generated: Tue Apr  2 19:18:53 2019
+Report generated: Tue Apr  2 19:32:28 2019
 
 
  Statistics
 ------------------------------------------------------------------------
 
   State Space
-     Nodes:  60024
-     Arcs:   109538
-     Secs:   300
-     Status: Partial
+     Nodes:  1198
+     Arcs:   2396
+     Secs:   0
+     Status: Full
 
   Scc Graph
-     Nodes:  17156
-     Arcs:   24629
-     Secs:   77
+     Nodes:  1
+     Arcs:   0
+     Secs:   0
 
 
  Boundedness Properties
@@ -31,85 +31,42 @@ Report generated: Tue Apr  2 19:18:53 2019
      Main'E2_car_call 1      1          1
      Main'E2_hall_call 1     1          1
      Main'E2_status 1        1          1
-     Main'Hall_floor 1       3          3
+     Main'Hall_floor 1       2          2
 
   Best Upper Multi-set Bounds
      Main'Button_clicked 1
                          1`(1,up)++
-1`(2,up)++
-1`(2,down)++
-1`(3,down)
+1`(2,down)
      Main'Direction 1    1`up++
 1`down
      Main'E1_car_call 1  1`[]++
 1`[1]++
-1`[1,2]++
-1`[1,2,3]++
-1`[1,3]++
-1`[2]++
-1`[2,3]++
-1`[3]
+1`[2]
      Main'E1_hall_call 1 1`[]++
 1`[(1,up)]++
-1`[(1,up),(2,up)]++
-1`[(1,up),(2,up),(2,down)]++
-1`[(1,up),(2,up),(2,down),(3,down)]++
-1`[(1,up),(2,up),(3,down)]++
 1`[(1,up),(2,down)]++
-1`[(1,up),(2,down),(3,down)]++
-1`[(1,up),(3,down)]++
-1`[(2,up)]++
-1`[(2,up),(2,down)]++
-1`[(2,up),(2,down),(3,down)]++
-1`[(2,up),(3,down)]++
-1`[(2,down)]++
-1`[(2,down),(3,down)]++
-1`[(3,down)]
+1`[(2,down)]
      Main'E1_status 1    1`(1,up)++
 1`(1,down)++
 1`(1,idle)++
 1`(2,up)++
 1`(2,down)++
-1`(2,idle)++
-1`(3,up)++
-1`(3,down)++
-1`(3,idle)
+1`(2,idle)
      Main'E2_car_call 1  1`[]++
 1`[1]++
-1`[1,2]++
-1`[1,2,3]++
-1`[1,3]++
-1`[2]++
-1`[2,3]++
-1`[3]
+1`[2]
      Main'E2_hall_call 1 1`[]++
 1`[(1,up)]++
-1`[(1,up),(2,up)]++
-1`[(1,up),(2,up),(2,down)]++
-1`[(1,up),(2,up),(2,down),(3,down)]++
-1`[(1,up),(2,up),(3,down)]++
 1`[(1,up),(2,down)]++
-1`[(1,up),(2,down),(3,down)]++
-1`[(1,up),(3,down)]++
-1`[(2,up)]++
-1`[(2,up),(2,down)]++
-1`[(2,up),(2,down),(3,down)]++
-1`[(2,up),(3,down)]++
-1`[(2,down)]++
-1`[(2,down),(3,down)]++
-1`[(3,down)]
+1`[(2,down)]
      Main'E2_status 1    1`(1,up)++
 1`(1,down)++
 1`(1,idle)++
 1`(2,up)++
 1`(2,down)++
-1`(2,idle)++
-1`(3,up)++
-1`(3,down)++
-1`(3,idle)
+1`(2,idle)
      Main'Hall_floor 1   1`1++
-1`2++
-1`3
+1`2
 
   Best Lower Multi-set Bounds
      Main'Button_clicked 1
@@ -123,22 +80,21 @@ Report generated: Tue Apr  2 19:18:53 2019
      Main'E2_hall_call 1 empty
      Main'E2_status 1    empty
      Main'Hall_floor 1   1`1++
-1`2++
-1`3
+1`2
 
 
  Home Properties
 ------------------------------------------------------------------------
 
   Home Markings
-     None
+     All
 
 
  Liveness Properties
 ------------------------------------------------------------------------
 
   Dead Markings
-     8778 [60024,60023,60022,60021,60020,...]
+     None
 
   Dead Transition Instances
      Execute'Exit_emergency 1
@@ -147,7 +103,15 @@ Report generated: Tue Apr  2 19:18:53 2019
      Execute'Make_emergency 2
 
   Live Transition Instances
-     None
+     Assign_hall_call'Assign_hall_call_to_E1 1
+     Assign_hall_call'Assign_hall_call_to_E2 1
+     Execute'Change_hall_call_to_car_call 1
+     Execute'Change_hall_call_to_car_call 2
+     Execute'Updating_status 1
+     Execute'Updating_status 2
+     Execute'User_arrived_to_dest 1
+     Execute'User_arrived_to_dest 2
+     Main'Validate_button 1
 
 
  Fairness Properties
