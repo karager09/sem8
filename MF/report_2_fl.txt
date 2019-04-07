@@ -1,0 +1,133 @@
+CPN Tools state space report for:
+/cygdrive/D/Studia/Sem. 8/sem8_git/MF/Winda_Karas.cpn
+Report generated: Sun Apr  7 22:30:03 2019
+
+
+ Statistics
+------------------------------------------------------------------------
+
+  State Space
+     Nodes:  5701
+     Arcs:   20684
+     Secs:   2
+     Status: Full
+
+  Scc Graph
+     Nodes:  1
+     Arcs:   0
+     Secs:   0
+
+
+ Boundedness Properties
+------------------------------------------------------------------------
+
+  Best Integer Bounds
+                             Upper      Lower
+     Main'Available_hall_calls 1
+                             2          0
+     Main'Button_clicked 1   2          0
+     Main'E1_car_call 1      1          1
+     Main'E1_hall_call 1     1          1
+     Main'E1_status 1        1          1
+     Main'E2_car_call 1      1          1
+     Main'E2_hall_call 1     1          1
+     Main'E2_status 1        1          1
+
+  Best Upper Multi-set Bounds
+     Main'Available_hall_calls 1
+                         1`(1,up)++
+1`(2,down)
+     Main'Button_clicked 1
+                         1`(1,up)++
+1`(2,down)
+     Main'E1_car_call 1  1`[]++
+1`[1]++
+1`[1,2]++
+1`[2]
+     Main'E1_hall_call 1 1`[]++
+1`[(1,up)]++
+1`[(1,up),(2,down)]++
+1`[(2,down)]
+     Main'E1_status 1    1`(1,up)++
+1`(1,down)++
+1`(1,idle)++
+1`(1,emergency)++
+1`(2,up)++
+1`(2,down)++
+1`(2,idle)++
+1`(2,emergency)
+     Main'E2_car_call 1  1`[]++
+1`[1]++
+1`[1,2]++
+1`[2]
+     Main'E2_hall_call 1 1`[]++
+1`[(1,up)]++
+1`[(1,up),(2,down)]++
+1`[(2,down)]
+     Main'E2_status 1    1`(1,up)++
+1`(1,down)++
+1`(1,idle)++
+1`(1,emergency)++
+1`(2,up)++
+1`(2,down)++
+1`(2,idle)++
+1`(2,emergency)
+
+  Best Lower Multi-set Bounds
+     Main'Available_hall_calls 1
+                         empty
+     Main'Button_clicked 1
+                         empty
+     Main'E1_car_call 1  empty
+     Main'E1_hall_call 1 empty
+     Main'E1_status 1    empty
+     Main'E2_car_call 1  empty
+     Main'E2_hall_call 1 empty
+     Main'E2_status 1    empty
+
+
+ Home Properties
+------------------------------------------------------------------------
+
+  Home Markings
+     All
+
+
+ Liveness Properties
+------------------------------------------------------------------------
+
+  Dead Markings
+     None
+
+  Dead Transition Instances
+     None
+
+  Live Transition Instances
+     All
+
+
+ Fairness Properties
+------------------------------------------------------------------------
+
+  Impartial Transition Instances
+     None
+
+  Fair Transition Instances
+     Assign_hall_call'Assign_hall_call_to_E1 1
+     Assign_hall_call'Assign_hall_call_to_E2 1
+
+  Just Transition Instances
+     None
+
+  Transition Instances with No Fairness
+     Execute'Change_hall_call_to_car_call 1
+     Execute'Change_hall_call_to_car_call 2
+     Execute'Exit_emergency 1
+     Execute'Exit_emergency 2
+     Execute'Make_emergency 1
+     Execute'Make_emergency 2
+     Execute'Updating_status 1
+     Execute'Updating_status 2
+     Execute'User_arrived_to_dest 1
+     Execute'User_arrived_to_dest 2
+     Main'Validate_button 1

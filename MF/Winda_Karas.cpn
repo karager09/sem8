@@ -673,7 +673,7 @@ clicked</text>
       </place>
       <place id="ID1413510296">
         <posattr x="-196.000000"
-                 y="516.000000"/>
+                 y="518.915649"/>
         <fillattr colour="White"
                   pattern=""
                   filled="false"/>
@@ -697,7 +697,7 @@ hall calls</text>
         </marking>
         <type id="ID1413510297">
           <posattr x="-136.000000"
-                   y="492.000000"/>
+                   y="494.000000"/>
           <fillattr colour="White"
                     pattern="Solid"
                     filled="false"/>
@@ -711,7 +711,7 @@ hall calls</text>
         </type>
         <initmark id="ID1413510298">
           <posattr x="-111.000000"
-                   y="539.000000"/>
+                   y="542.000000"/>
           <fillattr colour="White"
                     pattern="Solid"
                     filled="false"/>
@@ -1540,7 +1540,7 @@ Elev 2</text>
         <placeend idref="ID1413510296"/>
         <annot id="ID1413511204">
           <posattr x="-127.000000"
-                   y="463.000000"/>
+                   y="464.000000"/>
           <fillattr colour="White"
                     pattern="Solid"
                     filled="false"/>
@@ -1586,7 +1586,7 @@ Elev 2</text>
         <bendpoint id="ID1413517783"
                    serial="2">
           <posattr x="66.000000"
-                   y="516.000000"/>
+                   y="518.915649"/>
           <fillattr colour="White"
                     pattern="Solid"
                     filled="false"/>
@@ -1598,7 +1598,7 @@ Elev 2</text>
         </bendpoint>
         <annot id="ID1413512510">
           <posattr x="66.000000"
-                   y="398.000000"/>
+                   y="399.000000"/>
           <fillattr colour="White"
                     pattern="Solid"
                     filled="false"/>
@@ -1622,7 +1622,7 @@ Elev 2</text>
         <guideline_elm idref="ID1412922661"/>
       </hguideline>
       <hguideline id="ID1412978170"
-                  y="-516.308033">
+                  y="-518.915649">
         <guideline_elm idref="ID1413510296"/>
         <guideline_elm idref="ID1413517783"/>
       </hguideline>
@@ -2058,26 +2058,26 @@ to dest</text>
                 version="4.0.1"/>
         </priority>
       </trans>
-      <trans id="ID1413481021"
+      <trans id="ID1413530310"
              explicit="false">
-        <posattr x="-440.000000"
+        <posattr x="-398.000000"
                  y="-42.000000"/>
         <fillattr colour="White"
                   pattern=""
                   filled="false"/>
         <lineattr colour="Black"
                   thick="1"
-                  type="solid"/>
+                  type="Solid"/>
         <textattr colour="Black"
                   bold="false"/>
         <text>Make
 emergency</text>
-        <box w="86.000000"
+        <box w="60.000000"
              h="40.000000"/>
         <binding x="7.200000"
                  y="-3.000000"/>
-        <cond id="ID1413508475">
-          <posattr x="-585.000000"
+        <cond id="ID1413530311">
+          <posattr x="-519.500000"
                    y="-4.000000"/>
           <fillattr colour="White"
                     pattern="Solid"
@@ -2088,11 +2088,11 @@ emergency</text>
           <textattr colour="Black"
                     bold="false"/>
           <text tool="CPN Tools"
-                version="4.0.1">discrete(1,100) = 1
-andalso not(stat = emergency)</text>
+                version="4.0.1">not(stat = emergency)
+andalso discrete(1,100) = 1</text>
         </cond>
-        <time id="ID1413481023">
-          <posattr x="-382.500000"
+        <time id="ID1413530312">
+          <posattr x="-353.500000"
                    y="-11.000000"/>
           <fillattr colour="White"
                     pattern="Solid"
@@ -2105,8 +2105,8 @@ andalso not(stat = emergency)</text>
           <text tool="CPN Tools"
                 version="4.0.1"/>
         </time>
-        <code id="ID1413481024">
-          <posattr x="-362.500000"
+        <code id="ID1413530313">
+          <posattr x="-333.500000"
                    y="-94.000000"/>
           <fillattr colour="White"
                     pattern="Solid"
@@ -2119,8 +2119,8 @@ andalso not(stat = emergency)</text>
           <text tool="CPN Tools"
                 version="4.0.1"/>
         </code>
-        <priority id="ID1413505052">
-          <posattr x="-521.000000"
+        <priority id="ID1413530315">
+          <posattr x="-466.000000"
                    y="-73.000000"/>
           <fillattr colour="White"
                     pattern="Solid"
@@ -2134,27 +2134,27 @@ andalso not(stat = emergency)</text>
                 version="4.0.1"/>
         </priority>
       </trans>
-      <trans id="ID1413485602"
+      <trans id="ID1413530942"
              explicit="false">
-        <posattr x="-439.000000"
-                 y="-252.000000"/>
+        <posattr x="-399.000000"
+                 y="-210.000000"/>
         <fillattr colour="White"
                   pattern=""
                   filled="false"/>
         <lineattr colour="Black"
                   thick="1"
-                  type="solid"/>
+                  type="Solid"/>
         <textattr colour="Black"
                   bold="false"/>
         <text>Exit
 emergency</text>
-        <box w="86.000000"
+        <box w="60.000000"
              h="40.000000"/>
         <binding x="7.200000"
                  y="-3.000000"/>
-        <cond id="ID1413485603">
-          <posattr x="-541.500000"
-                   y="-221.000000"/>
+        <cond id="ID1413530943">
+          <posattr x="-488.500000"
+                   y="-179.000000"/>
           <fillattr colour="White"
                     pattern="Solid"
                     filled="false"/>
@@ -2166,9 +2166,9 @@ emergency</text>
           <text tool="CPN Tools"
                 version="4.0.1">stat = emergency</text>
         </cond>
-        <time id="ID1413485604">
-          <posattr x="-381.500000"
-                   y="-221.000000"/>
+        <time id="ID1413530944">
+          <posattr x="-354.500000"
+                   y="-179.000000"/>
           <fillattr colour="White"
                     pattern="Solid"
                     filled="false"/>
@@ -2180,9 +2180,9 @@ emergency</text>
           <text tool="CPN Tools"
                 version="4.0.1"/>
         </time>
-        <code id="ID1413485605">
-          <posattr x="-361.500000"
-                   y="-304.000000"/>
+        <code id="ID1413530945">
+          <posattr x="-334.500000"
+                   y="-262.000000"/>
           <fillattr colour="White"
                     pattern="Solid"
                     filled="false"/>
@@ -2194,9 +2194,9 @@ emergency</text>
           <text tool="CPN Tools"
                 version="4.0.1"/>
         </code>
-        <priority id="ID1413485607">
-          <posattr x="-520.000000"
-                   y="-283.000000"/>
+        <priority id="ID1413530947">
+          <posattr x="-467.000000"
+                   y="-241.000000"/>
           <fillattr colour="White"
                     pattern="Solid"
                     filled="false"/>
@@ -2624,7 +2624,7 @@ else (rmall (curr_floor, stat) hall_call_list)</text>
                 version="4.0.1">(curr_floor + add_floor(stat, curr_floor, car_call_list, hall_call_list),  change_status(curr_floor, stat, car_call_list, hall_call_list))</text>
         </annot>
       </arc>
-      <arc id="ID1413481518"
+      <arc id="ID1413531645"
            orientation="PtoT"
            order="2">
         <posattr x="0.000000"
@@ -2639,10 +2639,10 @@ else (rmall (curr_floor, stat) hall_call_list)</text>
                   bold="false"/>
         <arrowattr headsize="1.200000"
                    currentcyckle="2"/>
-        <transend idref="ID1413481021"/>
+        <transend idref="ID1413530310"/>
         <placeend idref="ID1412997426"/>
-        <annot id="ID1413481519">
-          <posattr x="-288.000000"
+        <annot id="ID1413531646">
+          <posattr x="-281.000000"
                    y="-24.000000"/>
           <fillattr colour="White"
                     pattern="Solid"
@@ -2656,7 +2656,7 @@ else (rmall (curr_floor, stat) hall_call_list)</text>
                 version="4.0.1">(curr_floor, stat)</text>
         </annot>
       </arc>
-      <arc id="ID1413482150"
+      <arc id="ID1413531834"
            orientation="TtoP"
            order="1">
         <posattr x="0.000000"
@@ -2671,10 +2671,10 @@ else (rmall (curr_floor, stat) hall_call_list)</text>
                   bold="false"/>
         <arrowattr headsize="1.200000"
                    currentcyckle="2"/>
-        <transend idref="ID1413481021"/>
+        <transend idref="ID1413530310"/>
         <placeend idref="ID1412997426"/>
-        <annot id="ID1413482151">
-          <posattr x="-293.000000"
+        <annot id="ID1413531835">
+          <posattr x="-289.000000"
                    y="-60.000000"/>
           <fillattr colour="White"
                     pattern="Solid"
@@ -2688,7 +2688,7 @@ else (rmall (curr_floor, stat) hall_call_list)</text>
                 version="4.0.1">(curr_floor, emergency)</text>
         </annot>
       </arc>
-      <arc id="ID1413487293"
+      <arc id="ID1413532067"
            orientation="PtoT"
            order="2">
         <posattr x="0.000000"
@@ -2703,11 +2703,11 @@ else (rmall (curr_floor, stat) hall_call_list)</text>
                   bold="false"/>
         <arrowattr headsize="1.200000"
                    currentcyckle="2"/>
-        <transend idref="ID1413485602"/>
+        <transend idref="ID1413530942"/>
         <placeend idref="ID1412997426"/>
-        <annot id="ID1413487294">
-          <posattr x="-371.500000"
-                   y="-145.000000"/>
+        <annot id="ID1413532068">
+          <posattr x="-331.500000"
+                   y="-109.000000"/>
           <fillattr colour="White"
                     pattern="Solid"
                     filled="false"/>
@@ -2720,7 +2720,7 @@ else (rmall (curr_floor, stat) hall_call_list)</text>
                 version="4.0.1">(curr_floor, stat)</text>
         </annot>
       </arc>
-      <arc id="ID1413488055"
+      <arc id="ID1413532313"
            orientation="TtoP"
            order="1">
         <posattr x="0.000000"
@@ -2735,11 +2735,11 @@ else (rmall (curr_floor, stat) hall_call_list)</text>
                   bold="false"/>
         <arrowattr headsize="1.200000"
                    currentcyckle="2"/>
-        <transend idref="ID1413485602"/>
+        <transend idref="ID1413530942"/>
         <placeend idref="ID1412997426"/>
-        <annot id="ID1413488056">
-          <posattr x="-260.000000"
-                   y="-178.000000"/>
+        <annot id="ID1413532314">
+          <posattr x="-252.000000"
+                   y="-164.000000"/>
           <fillattr colour="White"
                     pattern="Solid"
                     filled="false"/>
@@ -2763,21 +2763,6 @@ else (rmall (curr_floor, stat) hall_call_list)</text>
         <guideline_elm idref="ID1413020410"/>
         <guideline_elm idref="ID1413002333"/>
       </hguideline>
-      <Aux id="ID1413529092">
-        <posattr x="-546.000000"
-                 y="84.000000"/>
-        <fillattr colour="White"
-                  pattern=""
-                  filled="false"/>
-        <lineattr colour="Black"
-                  thick="1"
-                  type="Solid"/>
-        <textattr colour="Black"
-                  bold="false"/>
-        <label/>
-        <text>discrete(1,100) = 1
-andalso not(stat = emergency)</text>
-      </Aux>
     </page>
     <page id="ID1413113278">
       <pageattr name="Assign hall_call"/>
@@ -3774,7 +3759,12 @@ orelse (stat1 = required_status(curr_floor1, hall_floor)
           <text>&lt;same as model&gt;</text>
         </value>
       </option>
-      <option name="extensions.10003.enable">
+      <option name="extensions.10005.enable">
+        <value>
+          <boolean>true</boolean>
+        </value>
+      </option>
+      <option name="extensions.10006.enable">
         <value>
           <boolean>true</boolean>
         </value>
@@ -3789,12 +3779,7 @@ orelse (stat1 = required_status(curr_floor1, hall_floor)
           <boolean>true</boolean>
         </value>
       </option>
-      <option name="extensions.10006.enable">
-        <value>
-          <boolean>true</boolean>
-        </value>
-      </option>
-      <option name="extensions.10005.enable">
+      <option name="extensions.10003.enable">
         <value>
           <boolean>true</boolean>
         </value>
@@ -3997,14 +3982,14 @@ orelse (stat1 = required_status(curr_floor1, hall_floor)
     </options>
     <binders>
       <cpnbinder id="ID2222"
-                 x="454"
-                 y="186"
+                 x="449"
+                 y="147"
                  width="990"
                  height="583">
         <sheets>
           <cpnsheet id="ID2215"
-                    panx="121.000000"
-                    pany="341.000000"
+                    panx="214.000000"
+                    pany="355.000000"
                     zoom="1.150476"
                     instance="ID2149">
             <zorder>
@@ -4012,8 +3997,8 @@ orelse (stat1 = required_status(curr_floor1, hall_floor)
             </zorder>
           </cpnsheet>
           <cpnsheet id="ID1413113650"
-                    panx="265.000000"
-                    pany="209.000000"
+                    panx="288.000000"
+                    pany="206.000000"
                     zoom="1.000000"
                     instance="ID1413113336">
             <zorder>
@@ -4021,8 +4006,8 @@ orelse (stat1 = required_status(curr_floor1, hall_floor)
             </zorder>
           </cpnsheet>
           <cpnsheet id="ID1413347413"
-                    panx="-173.000000"
-                    pany="-22.000000"
+                    panx="-210.000000"
+                    pany="-10.000000"
                     zoom="1.000000"
                     instance="ID1412997456">
             <zorder>
@@ -4030,8 +4015,8 @@ orelse (stat1 = required_status(curr_floor1, hall_floor)
             </zorder>
           </cpnsheet>
           <cpnsheet id="ID1413349786"
-                    panx="-169.000000"
-                    pany="-23.000000"
+                    panx="-175.000000"
+                    pany="4.000000"
                     zoom="1.000000"
                     instance="ID1413245974">
             <zorder>
